@@ -5,21 +5,20 @@
   "source": "@site/docs/module1/00-setup.md",
   "sourceDirName": "module1",
   "slug": "/module1/setup",
-  "permalink": "/docs/module1/setup",
+  "permalink": "/Ai-Native-Book-Course/docs/module1/setup",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module1/00-setup.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 0,
   "frontMatter": {},
-  "sidebar": "tutorialSidebar",
+  "sidebar": "bookSidebar",
   "previous": {
-    "title": "Translate your site",
-    "permalink": "/docs/tutorial-extras/translate-your-site"
+    "title": "Preface",
+    "permalink": "/Ai-Native-Book-Course/docs/preface"
   },
   "next": {
     "title": "Understanding ROS 2 Nodes",
-    "permalink": "/docs/module1/nodes"
+    "permalink": "/Ai-Native-Book-Course/docs/module1/nodes"
   }
 }

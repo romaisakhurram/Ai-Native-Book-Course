@@ -1,0 +1,24 @@
+{
+  "id": "module2/sensor-sim",
+  "title": "Sensor Simulation (LiDAR, Depth, IMU)",
+  "description": "This chapter delves into the principles and techniques behind simulating common robot sensors like LiDAR, Depth cameras, and IMUs in virtual environments.",
+  "source": "@site/docs/module2/02-sensor-sim.md",
+  "sourceDirName": "module2",
+  "slug": "/module2/sensor-sim",
+  "permalink": "/Ai-Native-Book-Course/docs/module2/sensor-sim",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Physics Simulation and Collision Modeling",
+    "permalink": "/Ai-Native-Book-Course/docs/module2/physics-collision"
+  },
+  "next": {
+    "title": "Building a Basic Digital Twin in Gazebo",
+    "permalink": "/Ai-Native-Book-Course/docs/module2/gazebo-digital-twin"
+  }
+}

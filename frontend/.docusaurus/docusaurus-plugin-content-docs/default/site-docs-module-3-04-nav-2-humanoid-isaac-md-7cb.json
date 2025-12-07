@@ -1,0 +1,20 @@
+{
+  "id": "module3/nav2-humanoid-isaac",
+  "title": "Nav2 for Humanoids with Isaac Sim and VSLAM",
+  "description": "This chapter explores how to integrate the ROS 2 Navigation Stack (Nav2) with Isaac Sim for autonomous navigation of humanoid robots, utilizing Visual SLAM (VSLAM) for localization.",
+  "source": "@site/docs/module3/04-nav2-humanoid-isaac.md",
+  "sourceDirName": "module3",
+  "slug": "/module3/nav2-humanoid-isaac",
+  "permalink": "/Ai-Native-Book-Course/docs/module3/nav2-humanoid-isaac",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Creating a Basic Perception Pipeline with Isaac ROS",
+    "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-ros-pipeline"
+  }
+}

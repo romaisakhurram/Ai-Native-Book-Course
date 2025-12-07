@@ -1,23 +1,22 @@
 {
   "id": "intro",
-  "title": "Tutorial Intro",
-  "description": "Let's discover Docusaurus in less than 5 minutes.",
+  "title": "Introduction to Physical AI & Humanoid Robotics",
+  "description": "Welcome to a journey into the fascinating world of Physical AI and Humanoid Robotics. This book is designed for students, researchers, and engineers who are eager to understand and build intelligent robotic systems that interact with the physical world.",
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",
-  "permalink": "/docs/intro",
+  "permalink": "/Ai-Native-Book-Course/docs/intro",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/intro.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
   "frontMatter": {
     "sidebar_position": 1
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "bookSidebar",
   "next": {
-    "title": "Tutorial - Basics",
-    "permalink": "/docs/category/tutorial---basics"
+    "title": "Preface",
+    "permalink": "/Ai-Native-Book-Course/docs/preface"
   }
 }

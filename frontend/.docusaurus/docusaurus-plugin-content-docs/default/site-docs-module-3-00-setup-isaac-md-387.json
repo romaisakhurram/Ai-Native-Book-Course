@@ -1,0 +1,24 @@
+{
+  "id": "module3/setup-isaac",
+  "title": "Setting up Isaac Sim and Isaac ROS Environments",
+  "description": "This chapter provides a foundational guide for setting up your development environment to work with NVIDIA Isaac Sim and Isaac ROS for advanced robotics simulation and AI-driven perception.",
+  "source": "@site/docs/module3/00-setup-isaac.md",
+  "sourceDirName": "module3",
+  "slug": "/module3/setup-isaac",
+  "permalink": "/Ai-Native-Book-Course/docs/module3/setup-isaac",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {},
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Unity for Robot Visualization and Human-Robot Interaction",
+    "permalink": "/Ai-Native-Book-Course/docs/module2/unity-hri"
+  },
+  "next": {
+    "title": "Isaac Sim Basics and Photorealistic Simulation",
+    "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-sim-basics"
+  }
+}

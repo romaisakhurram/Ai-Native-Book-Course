@@ -1,0 +1,915 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "2237": [
+      2237
+    ],
+    "3269": [
+      867,
+      1869,
+      3249,
+      4212,
+      4813,
+      5159,
+      7643,
+      3269
+    ],
+    "5159": [
+      867,
+      1869,
+      3249,
+      3269,
+      4813,
+      6061,
+      7643,
+      8401,
+      5159
+    ],
+    "17896441": [
+      1869,
+      5159,
+      8401
+    ],
+    "59362658": [
+      9325
+    ],
+    "main": [
+      1869,
+      5354,
+      8792
+    ],
+    "runtime~main": [
+      1869,
+      8792,
+      5354
+    ],
+    "01a85c17": [
+      1869,
+      8209
+    ],
+    "0747918a": [
+      1600
+    ],
+    "0e384e19": [
+      3976
+    ],
+    "12080dd4": [
+      850
+    ],
+    "18c41134": [
+      9262
+    ],
+    "1d43de67": [
+      3155
+    ],
+    "1df93b7f": [
+      1869,
+      4583
+    ],
+    "1e4232ab": [
+      1953
+    ],
+    "1f391b9e": [
+      1869,
+      5159,
+      6061
+    ],
+    "2556eefe": [
+      5524
+    ],
+    "33fc5bb8": [
+      1869,
+      3269,
+      5159,
+      867
+    ],
+    "36994c47": [
+      9858
+    ],
+    "3879fd3b": [
+      9143
+    ],
+    "393be207": [
+      4134
+    ],
+    "407ed577": [
+      8272
+    ],
+    "44b902cc": [
+      4056
+    ],
+    "512b32e1": [
+      6536
+    ],
+    "533a09ca": [
+      3098
+    ],
+    "5c868d36": [
+      1974
+    ],
+    "5e95c892": [
+      9647
+    ],
+    "621db11d": [
+      1869,
+      3269,
+      4212
+    ],
+    "6875c492": [
+      1869,
+      3269,
+      5159,
+      4813
+    ],
+    "69e3d8f5": [
+      7255
+    ],
+    "73664a40": [
+      1972
+    ],
+    "7661071f": [
+      8737
+    ],
+    "7cb7f37e": [
+      4337
+    ],
+    "7e3e33e2": [
+      9404
+    ],
+    "814f3328": [
+      7472
+    ],
+    "822bd8ab": [
+      2748
+    ],
+    "8717b14a": [
+      3694
+    ],
+    "8f63617b": [
+      7236
+    ],
+    "925b3f96": [
+      8609
+    ],
+    "987e53f1": [
+      1051
+    ],
+    "9a0333fe": [
+      6263
+    ],
+    "9d84655d": [
+      9680
+    ],
+    "9e4087bc": [
+      2711
+    ],
+    "a6aa9e1f": [
+      1869,
+      3269,
+      5159,
+      7643
+    ],
+    "a7456010": [
+      1235
+    ],
+    "a7bd4aaa": [
+      7098
+    ],
+    "a94703ab": [
+      1869,
+      9048
+    ],
+    "aba21aa0": [
+      5742
+    ],
+    "acecf23e": [
+      1903
+    ],
+    "ad58bcaa": [
+      6368
+    ],
+    "ae9ff2e5": [
+      954
+    ],
+    "b7c9ec7e": [
+      3754
+    ],
+    "c2f45d68": [
+      9311
+    ],
+    "c4857a34": [
+      9946
+    ],
+    "c5279e24": [
+      2506
+    ],
+    "c6dc534c": [
+      8120
+    ],
+    "ccc49370": [
+      1869,
+      3269,
+      5159,
+      3249
+    ],
+    "d7eabe2a": [
+      4754
+    ],
+    "d93a0d77": [
+      6852
+    ],
+    "d9f32620": [
+      5557
+    ],
+    "de100b4a": [
+      6726
+    ],
+    "dff1c289": [
+      1724
+    ],
+    "e14129a3": [
+      9923
+    ],
+    "e273c56f": [
+      9328
+    ],
+    "e31563f4": [
+      7686
+    ],
+    "e44a2883": [
+      4736
+    ],
+    "f4f34a3a": [
+      3637
+    ],
+    "f55d3e7a": [
+      8863
+    ],
+    "f8113fe8": [
+      8363
+    ],
+    "fd2f8e48": [
+      9272
+    ],
+    "styles": [
+      867,
+      3249,
+      3269,
+      4212,
+      4583,
+      4813,
+      5159,
+      5354,
+      6061,
+      7643,
+      8209,
+      8401,
+      8792,
+      9048,
+      1869
+    ]
+  },
+  "assets": {
+    "850": {
+      "js": [
+        {
+          "file": "assets/js/12080dd4.bc898add.js",
+          "hash": "903c8fc894f2880f",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/12080dd4.bc898add.js"
+        }
+      ]
+    },
+    "867": {
+      "js": [
+        {
+          "file": "assets/js/33fc5bb8.f84e7a09.js",
+          "hash": "19ebe184b08a7bf1",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/33fc5bb8.f84e7a09.js"
+        }
+      ]
+    },
+    "954": {
+      "js": [
+        {
+          "file": "assets/js/ae9ff2e5.0cf00bf6.js",
+          "hash": "479d06ac6d8f4c5d",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/ae9ff2e5.0cf00bf6.js"
+        }
+      ]
+    },
+    "1051": {
+      "js": [
+        {
+          "file": "assets/js/987e53f1.69ca4338.js",
+          "hash": "dd39cf63bf7646fc",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/987e53f1.69ca4338.js"
+        }
+      ]
+    },
+    "1235": {
+      "js": [
+        {
+          "file": "assets/js/a7456010.e1f904ec.js",
+          "hash": "b4677719cafc0573",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/a7456010.e1f904ec.js"
+        }
+      ]
+    },
+    "1600": {
+      "js": [
+        {
+          "file": "assets/js/0747918a.3fcaaa48.js",
+          "hash": "2532be89c701a6f3",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/0747918a.3fcaaa48.js"
+        }
+      ]
+    },
+    "1724": {
+      "js": [
+        {
+          "file": "assets/js/dff1c289.305a274a.js",
+          "hash": "d7bdfdd72f21ce7e",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/dff1c289.305a274a.js"
+        }
+      ]
+    },
+    "1869": {
+      "css": [
+        {
+          "file": "assets/css/styles.9c53a5ce.css",
+          "hash": "79a7e00f2e1e4ea6",
+          "publicPath": "/Ai-Native-Book-Course/assets/css/styles.9c53a5ce.css"
+        }
+      ]
+    },
+    "1903": {
+      "js": [
+        {
+          "file": "assets/js/acecf23e.51cb6d08.js",
+          "hash": "a02eb6ecf794fcad",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/acecf23e.51cb6d08.js"
+        }
+      ]
+    },
+    "1953": {
+      "js": [
+        {
+          "file": "assets/js/1e4232ab.17eb238c.js",
+          "hash": "f3364df6fab836e2",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/1e4232ab.17eb238c.js"
+        }
+      ]
+    },
+    "1972": {
+      "js": [
+        {
+          "file": "assets/js/73664a40.d9c970ac.js",
+          "hash": "5f78455dd39dff40",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/73664a40.d9c970ac.js"
+        }
+      ]
+    },
+    "1974": {
+      "js": [
+        {
+          "file": "assets/js/5c868d36.cda9c482.js",
+          "hash": "690b38578d34e0de",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/5c868d36.cda9c482.js"
+        }
+      ]
+    },
+    "2237": {
+      "js": [
+        {
+          "file": "assets/js/2237.83da5e8c.js",
+          "hash": "92dc4dc5789cdbe4",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/2237.83da5e8c.js"
+        }
+      ]
+    },
+    "2506": {
+      "js": [
+        {
+          "file": "assets/js/c5279e24.624e2bcd.js",
+          "hash": "99110897120b2dcb",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/c5279e24.624e2bcd.js"
+        }
+      ]
+    },
+    "2711": {
+      "js": [
+        {
+          "file": "assets/js/9e4087bc.2c4f3d25.js",
+          "hash": "65afde227a8b05b6",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/9e4087bc.2c4f3d25.js"
+        }
+      ]
+    },
+    "2748": {
+      "js": [
+        {
+          "file": "assets/js/822bd8ab.c40734ca.js",
+          "hash": "41d8f0889d26d1a5",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/822bd8ab.c40734ca.js"
+        }
+      ]
+    },
+    "3098": {
+      "js": [
+        {
+          "file": "assets/js/533a09ca.88a46ce9.js",
+          "hash": "eba23c7da2565dfc",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/533a09ca.88a46ce9.js"
+        }
+      ]
+    },
+    "3155": {
+      "js": [
+        {
+          "file": "assets/js/1d43de67.b9c87039.js",
+          "hash": "e37a8420dd8879db",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/1d43de67.b9c87039.js"
+        }
+      ]
+    },
+    "3249": {
+      "js": [
+        {
+          "file": "assets/js/ccc49370.ff8256c4.js",
+          "hash": "7f3d754ee16f3031",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/ccc49370.ff8256c4.js"
+        }
+      ]
+    },
+    "3269": {
+      "js": [
+        {
+          "file": "assets/js/3269.6cb7986f.js",
+          "hash": "76b3c2e95002c11a",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/3269.6cb7986f.js"
+        }
+      ]
+    },
+    "3637": {
+      "js": [
+        {
+          "file": "assets/js/f4f34a3a.04f99a40.js",
+          "hash": "53273da448f01603",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/f4f34a3a.04f99a40.js"
+        }
+      ]
+    },
+    "3694": {
+      "js": [
+        {
+          "file": "assets/js/8717b14a.3c072352.js",
+          "hash": "81fe0e378efaf585",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/8717b14a.3c072352.js"
+        }
+      ]
+    },
+    "3754": {
+      "js": [
+        {
+          "file": "assets/js/b7c9ec7e.e7b64ab9.js",
+          "hash": "df4d332903f24080",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/b7c9ec7e.e7b64ab9.js"
+        }
+      ]
+    },
+    "3976": {
+      "js": [
+        {
+          "file": "assets/js/0e384e19.d374feee.js",
+          "hash": "d8ac41e9d68eba18",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/0e384e19.d374feee.js"
+        }
+      ]
+    },
+    "4056": {
+      "js": [
+        {
+          "file": "assets/js/44b902cc.0268d353.js",
+          "hash": "7067473e2095cfb3",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/44b902cc.0268d353.js"
+        }
+      ]
+    },
+    "4134": {
+      "js": [
+        {
+          "file": "assets/js/393be207.2d478013.js",
+          "hash": "6dd8fd407e014c69",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/393be207.2d478013.js"
+        }
+      ]
+    },
+    "4212": {
+      "js": [
+        {
+          "file": "assets/js/621db11d.0a77770a.js",
+          "hash": "4fa04344d89f9739",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/621db11d.0a77770a.js"
+        }
+      ]
+    },
+    "4337": {
+      "js": [
+        {
+          "file": "assets/js/7cb7f37e.0a304cc8.js",
+          "hash": "0f754f2c664c8d50",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/7cb7f37e.0a304cc8.js"
+        }
+      ]
+    },
+    "4583": {
+      "js": [
+        {
+          "file": "assets/js/1df93b7f.d5f4c1e4.js",
+          "hash": "619137474e8ac3a0",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/1df93b7f.d5f4c1e4.js"
+        }
+      ]
+    },
+    "4736": {
+      "js": [
+        {
+          "file": "assets/js/e44a2883.a0131807.js",
+          "hash": "842f23d931b5de76",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/e44a2883.a0131807.js"
+        }
+      ]
+    },
+    "4754": {
+      "js": [
+        {
+          "file": "assets/js/d7eabe2a.1aaff1ee.js",
+          "hash": "bc2ad69f0b9ccf61",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/d7eabe2a.1aaff1ee.js"
+        }
+      ]
+    },
+    "4813": {
+      "js": [
+        {
+          "file": "assets/js/6875c492.8a83cb9f.js",
+          "hash": "fd3193cef6f5cc3e",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/6875c492.8a83cb9f.js"
+        }
+      ]
+    },
+    "5159": {
+      "js": [
+        {
+          "file": "assets/js/5159.fd7636f1.js",
+          "hash": "5ef9d3f88ac528ad",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/5159.fd7636f1.js"
+        }
+      ]
+    },
+    "5354": {
+      "js": [
+        {
+          "file": "assets/js/runtime~main.e5f0e322.js",
+          "hash": "4a67887d24b9e251",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/runtime~main.e5f0e322.js"
+        }
+      ]
+    },
+    "5524": {
+      "js": [
+        {
+          "file": "assets/js/2556eefe.0ef3e649.js",
+          "hash": "951fdf458eaa988f",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/2556eefe.0ef3e649.js"
+        }
+      ]
+    },
+    "5557": {
+      "js": [
+        {
+          "file": "assets/js/d9f32620.2508b639.js",
+          "hash": "d0f405938f1bc8c1",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/d9f32620.2508b639.js"
+        }
+      ]
+    },
+    "5742": {
+      "js": [
+        {
+          "file": "assets/js/aba21aa0.7e75a5ce.js",
+          "hash": "a93cf7b787395f14",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/aba21aa0.7e75a5ce.js"
+        }
+      ]
+    },
+    "6061": {
+      "js": [
+        {
+          "file": "assets/js/1f391b9e.22636793.js",
+          "hash": "f23a4162d5ba2d70",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/1f391b9e.22636793.js"
+        }
+      ]
+    },
+    "6263": {
+      "js": [
+        {
+          "file": "assets/js/9a0333fe.0d8b9c8f.js",
+          "hash": "7f70f0668363c444",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/9a0333fe.0d8b9c8f.js"
+        }
+      ]
+    },
+    "6368": {
+      "js": [
+        {
+          "file": "assets/js/ad58bcaa.a40baa88.js",
+          "hash": "b8b1dfb10cfa5a70",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/ad58bcaa.a40baa88.js"
+        }
+      ]
+    },
+    "6536": {
+      "js": [
+        {
+          "file": "assets/js/512b32e1.28ed2154.js",
+          "hash": "37474439de08987c",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/512b32e1.28ed2154.js"
+        }
+      ]
+    },
+    "6726": {
+      "js": [
+        {
+          "file": "assets/js/de100b4a.32d1097f.js",
+          "hash": "1098f671b298ecb6",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/de100b4a.32d1097f.js"
+        }
+      ]
+    },
+    "6852": {
+      "js": [
+        {
+          "file": "assets/js/d93a0d77.30a32f9c.js",
+          "hash": "c7ee202245300238",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/d93a0d77.30a32f9c.js"
+        }
+      ]
+    },
+    "7098": {
+      "js": [
+        {
+          "file": "assets/js/a7bd4aaa.30d25486.js",
+          "hash": "082586c691abf16a",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/a7bd4aaa.30d25486.js"
+        }
+      ]
+    },
+    "7236": {
+      "js": [
+        {
+          "file": "assets/js/8f63617b.412a6ddb.js",
+          "hash": "f66ee06fd84b4260",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/8f63617b.412a6ddb.js"
+        }
+      ]
+    },
+    "7255": {
+      "js": [
+        {
+          "file": "assets/js/69e3d8f5.1a20246a.js",
+          "hash": "735b4c8192be8048",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/69e3d8f5.1a20246a.js"
+        }
+      ]
+    },
+    "7472": {
+      "js": [
+        {
+          "file": "assets/js/814f3328.412d84cf.js",
+          "hash": "c418158d44beecda",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/814f3328.412d84cf.js"
+        }
+      ]
+    },
+    "7643": {
+      "js": [
+        {
+          "file": "assets/js/a6aa9e1f.f870d804.js",
+          "hash": "b490f7a3c95b96b9",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/a6aa9e1f.f870d804.js"
+        }
+      ]
+    },
+    "7686": {
+      "js": [
+        {
+          "file": "assets/js/e31563f4.058d5a2e.js",
+          "hash": "0ca0144a4bccf082",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/e31563f4.058d5a2e.js"
+        }
+      ]
+    },
+    "8120": {
+      "js": [
+        {
+          "file": "assets/js/c6dc534c.c0ec71fc.js",
+          "hash": "0ef94b0a891a169e",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/c6dc534c.c0ec71fc.js"
+        }
+      ]
+    },
+    "8209": {
+      "js": [
+        {
+          "file": "assets/js/01a85c17.9481ed70.js",
+          "hash": "ff5176cea49086e6",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/01a85c17.9481ed70.js"
+        }
+      ]
+    },
+    "8272": {
+      "js": [
+        {
+          "file": "assets/js/407ed577.e985bf29.js",
+          "hash": "2114e1755465fbf0",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/407ed577.e985bf29.js"
+        }
+      ]
+    },
+    "8363": {
+      "js": [
+        {
+          "file": "assets/js/f8113fe8.2923b39f.js",
+          "hash": "a6dc2d1192c6c4b0",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/f8113fe8.2923b39f.js"
+        }
+      ]
+    },
+    "8401": {
+      "js": [
+        {
+          "file": "assets/js/17896441.62c2c758.js",
+          "hash": "8086e96aecd984b9",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/17896441.62c2c758.js"
+        }
+      ]
+    },
+    "8609": {
+      "js": [
+        {
+          "file": "assets/js/925b3f96.93361493.js",
+          "hash": "0ddfa4abd0db4587",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/925b3f96.93361493.js"
+        }
+      ]
+    },
+    "8737": {
+      "js": [
+        {
+          "file": "assets/js/7661071f.208ee5df.js",
+          "hash": "77a5e0926e3c009f",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/7661071f.208ee5df.js"
+        }
+      ]
+    },
+    "8792": {
+      "js": [
+        {
+          "file": "assets/js/main.6e10eb54.js",
+          "hash": "fea9f8f8c660f994",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/main.6e10eb54.js"
+        }
+      ]
+    },
+    "8863": {
+      "js": [
+        {
+          "file": "assets/js/f55d3e7a.5740e9b6.js",
+          "hash": "259f192a5b0756bf",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/f55d3e7a.5740e9b6.js"
+        }
+      ]
+    },
+    "9048": {
+      "js": [
+        {
+          "file": "assets/js/a94703ab.d67c6f22.js",
+          "hash": "d8c27c13cfe848ea",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/a94703ab.d67c6f22.js"
+        }
+      ]
+    },
+    "9143": {
+      "js": [
+        {
+          "file": "assets/js/3879fd3b.8db6c670.js",
+          "hash": "d12940f1c3bdd0f0",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/3879fd3b.8db6c670.js"
+        }
+      ]
+    },
+    "9262": {
+      "js": [
+        {
+          "file": "assets/js/18c41134.b4c50784.js",
+          "hash": "97dc1d2761fb5a2a",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/18c41134.b4c50784.js"
+        }
+      ]
+    },
+    "9272": {
+      "js": [
+        {
+          "file": "assets/js/fd2f8e48.f588a961.js",
+          "hash": "ec897d638f6550bf",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/fd2f8e48.f588a961.js"
+        }
+      ]
+    },
+    "9311": {
+      "js": [
+        {
+          "file": "assets/js/c2f45d68.8e59f7da.js",
+          "hash": "172eec3837847f9f",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/c2f45d68.8e59f7da.js"
+        }
+      ]
+    },
+    "9325": {
+      "js": [
+        {
+          "file": "assets/js/59362658.f3934ec3.js",
+          "hash": "072d5b7febe089a9",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/59362658.f3934ec3.js"
+        }
+      ]
+    },
+    "9328": {
+      "js": [
+        {
+          "file": "assets/js/e273c56f.09ed07e1.js",
+          "hash": "23f33d44cc52a1a3",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/e273c56f.09ed07e1.js"
+        }
+      ]
+    },
+    "9404": {
+      "js": [
+        {
+          "file": "assets/js/7e3e33e2.5df9d1fb.js",
+          "hash": "958a5649d316e144",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/7e3e33e2.5df9d1fb.js"
+        }
+      ]
+    },
+    "9647": {
+      "js": [
+        {
+          "file": "assets/js/5e95c892.dfed27a4.js",
+          "hash": "4799d60c7a0b5bbb",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/5e95c892.dfed27a4.js"
+        }
+      ]
+    },
+    "9680": {
+      "js": [
+        {
+          "file": "assets/js/9d84655d.58eccdf7.js",
+          "hash": "682423b67dd02299",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/9d84655d.58eccdf7.js"
+        }
+      ]
+    },
+    "9858": {
+      "js": [
+        {
+          "file": "assets/js/36994c47.07f53a98.js",
+          "hash": "d88c8730e9c86de9",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/36994c47.07f53a98.js"
+        }
+      ]
+    },
+    "9923": {
+      "js": [
+        {
+          "file": "assets/js/e14129a3.dd7a4c44.js",
+          "hash": "9e8c9ba856315d0d",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/e14129a3.dd7a4c44.js"
+        }
+      ]
+    },
+    "9946": {
+      "js": [
+        {
+          "file": "assets/js/c4857a34.08861c20.js",
+          "hash": "455d22acd19779be",
+          "publicPath": "/Ai-Native-Book-Course/assets/js/c4857a34.08861c20.js"
+        }
+      ]
+    }
+  }
+}

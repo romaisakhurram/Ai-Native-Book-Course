@@ -1,0 +1,24 @@
+{
+  "id": "module2/setup-unity",
+  "title": "Setting up Unity for Robotics",
+  "description": "Unity provides a powerful platform for 3D visualization, simulation, and human-robot interaction. This chapter guides you through setting up Unity for robotics development.",
+  "source": "@site/docs/module2/00-setup-unity.md",
+  "sourceDirName": "module2",
+  "slug": "/module2/setup-unity",
+  "permalink": "/Ai-Native-Book-Course/docs/module2/setup-unity",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {},
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Setting up ROS 2 and Gazebo for Digital Twin Simulation",
+    "permalink": "/Ai-Native-Book-Course/docs/module2/setup-gazebo"
+  },
+  "next": {
+    "title": "Physics Simulation and Collision Modeling",
+    "permalink": "/Ai-Native-Book-Course/docs/module2/physics-collision"
+  }
+}

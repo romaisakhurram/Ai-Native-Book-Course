@@ -1,106 +1,148 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs",
+      "path": "/Ai-Native-Book-Course/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs",
+          "path": "/Ai-Native-Book-Course/docs",
           "mainDocId": "intro",
           "docs": [
             {
               "id": "intro",
-              "path": "/docs/intro",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/intro",
+              "sidebar": "bookSidebar"
             },
             {
               "id": "module1/nodes",
-              "path": "/docs/module1/nodes",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/module1/nodes",
+              "sidebar": "bookSidebar"
             },
             {
               "id": "module1/rclpy-basics",
-              "path": "/docs/module1/rclpy-basics",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/module1/rclpy-basics",
+              "sidebar": "bookSidebar"
             },
             {
               "id": "module1/services",
-              "path": "/docs/module1/services",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/module1/services",
+              "sidebar": "bookSidebar"
             },
             {
               "id": "module1/setup",
-              "path": "/docs/module1/setup",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/module1/setup",
+              "sidebar": "bookSidebar"
             },
             {
               "id": "module1/topics",
-              "path": "/docs/module1/topics",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/module1/topics",
+              "sidebar": "bookSidebar"
             },
             {
               "id": "module1/urdf-basics",
-              "path": "/docs/module1/urdf-basics",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/module1/urdf-basics",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module2/gazebo-digital-twin",
+              "path": "/Ai-Native-Book-Course/docs/module2/gazebo-digital-twin",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module2/physics-collision",
+              "path": "/Ai-Native-Book-Course/docs/module2/physics-collision",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module2/sensor-sim",
+              "path": "/Ai-Native-Book-Course/docs/module2/sensor-sim",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module2/setup-gazebo",
+              "path": "/Ai-Native-Book-Course/docs/module2/setup-gazebo",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module2/setup-unity",
+              "path": "/Ai-Native-Book-Course/docs/module2/setup-unity",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module2/unity-hri",
+              "path": "/Ai-Native-Book-Course/docs/module2/unity-hri",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module3/isaac-ros-perception",
+              "path": "/Ai-Native-Book-Course/docs/module3/isaac-ros-perception",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module3/isaac-ros-pipeline",
+              "path": "/Ai-Native-Book-Course/docs/module3/isaac-ros-pipeline",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module3/isaac-sim-basics",
+              "path": "/Ai-Native-Book-Course/docs/module3/isaac-sim-basics",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module3/nav2-humanoid-isaac",
+              "path": "/Ai-Native-Book-Course/docs/module3/nav2-humanoid-isaac",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module3/setup-isaac",
+              "path": "/Ai-Native-Book-Course/docs/module3/setup-isaac",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "preface",
+              "path": "/Ai-Native-Book-Course/docs/preface",
+              "sidebar": "bookSidebar"
             },
             {
               "id": "tutorial-basics/congratulations",
-              "path": "/docs/tutorial-basics/congratulations",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/tutorial-basics/congratulations"
             },
             {
               "id": "tutorial-basics/create-a-blog-post",
-              "path": "/docs/tutorial-basics/create-a-blog-post",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/tutorial-basics/create-a-blog-post"
             },
             {
               "id": "tutorial-basics/create-a-document",
-              "path": "/docs/tutorial-basics/create-a-document",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/tutorial-basics/create-a-document"
             },
             {
               "id": "tutorial-basics/create-a-page",
-              "path": "/docs/tutorial-basics/create-a-page",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/tutorial-basics/create-a-page"
             },
             {
               "id": "tutorial-basics/deploy-your-site",
-              "path": "/docs/tutorial-basics/deploy-your-site",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/tutorial-basics/deploy-your-site"
             },
             {
               "id": "tutorial-basics/markdown-features",
-              "path": "/docs/tutorial-basics/markdown-features",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/tutorial-basics/markdown-features"
             },
             {
               "id": "tutorial-extras/manage-docs-versions",
-              "path": "/docs/tutorial-extras/manage-docs-versions",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/tutorial-extras/manage-docs-versions"
             },
             {
               "id": "tutorial-extras/translate-your-site",
-              "path": "/docs/tutorial-extras/translate-your-site",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/tutorial---basics",
-              "path": "/docs/category/tutorial---basics",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/tutorial---extras",
-              "path": "/docs/category/tutorial---extras",
-              "sidebar": "tutorialSidebar"
+              "path": "/Ai-Native-Book-Course/docs/tutorial-extras/translate-your-site"
             }
           ],
           "draftIds": [],
           "sidebars": {
-            "tutorialSidebar": {
+            "bookSidebar": {
               "link": {
-                "path": "/docs/intro",
+                "path": "/Ai-Native-Book-Course/docs/intro",
                 "label": "intro"
               }
             }

@@ -1,0 +1,24 @@
+{
+  "id": "module2/physics-collision",
+  "title": "Physics Simulation and Collision Modeling",
+  "description": "This chapter explores the fundamentals of physics simulation and collision modeling in the context of robot digital twins.",
+  "source": "@site/docs/module2/01-physics-collision.md",
+  "sourceDirName": "module2",
+  "slug": "/module2/physics-collision",
+  "permalink": "/Ai-Native-Book-Course/docs/module2/physics-collision",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Setting up Unity for Robotics",
+    "permalink": "/Ai-Native-Book-Course/docs/module2/setup-unity"
+  },
+  "next": {
+    "title": "Sensor Simulation (LiDAR, Depth, IMU)",
+    "permalink": "/Ai-Native-Book-Course/docs/module2/sensor-sim"
+  }
+}

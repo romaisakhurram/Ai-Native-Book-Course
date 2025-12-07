@@ -28,10 +28,10 @@ export default {
     },
     "experimental_router": "browser"
   },
-  "url": "https://your-docusaurus-site.example.com",
-  "baseUrl": "/",
-  "organizationName": "",
-  "projectName": "",
+  "url": "https://romaisakhurram.github.io",
+  "baseUrl": "/Ai-Native-Book-Course/",
+  "organizationName": "romaisakhurram",
+  "projectName": "Ai-Native-Book-Course",
   "onBrokenLinks": "throw",
   "i18n": {
     "defaultLocale": "en",
@@ -46,8 +46,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "./sidebars.ts",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "sidebarPath": "./sidebars.ts"
         },
         "blog": {
           "showReadingTime": true,
@@ -58,7 +57,6 @@ export default {
             ],
             "xslt": true
           },
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           "onInlineTags": "warn",
           "onInlineAuthors": "warn",
           "onUntruncatedBlogPosts": "warn"
@@ -85,14 +83,9 @@ export default {
       "items": [
         {
           "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
+          "sidebarId": "bookSidebar",
           "position": "left",
           "label": "Book"
-        },
-        {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
         },
         {
           "href": "https://github.com/facebook/docusaurus",
@@ -134,10 +127,6 @@ export default {
         {
           "title": "More",
           "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
-            },
             {
               "label": "GitHub",
               "href": "https://github.com/facebook/docusaurus"

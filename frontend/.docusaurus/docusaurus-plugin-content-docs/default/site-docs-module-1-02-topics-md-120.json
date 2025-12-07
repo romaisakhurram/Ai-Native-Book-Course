@@ -1,25 +1,24 @@
 {
   "id": "module1/topics",
   "title": "Understanding ROS 2 Topics",
-  "description": "This chapter will explain what ROS 2 topics are and how they are used for communication.",
+  "description": "Topics are the most common communication mechanism in ROS 2. They implement a publish/subscribe messaging pattern, allowing nodes to exchange data asynchronously.",
   "source": "@site/docs/module1/02-topics.md",
   "sourceDirName": "module1",
   "slug": "/module1/topics",
-  "permalink": "/docs/module1/topics",
+  "permalink": "/Ai-Native-Book-Course/docs/module1/topics",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module1/02-topics.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
   "frontMatter": {},
-  "sidebar": "tutorialSidebar",
+  "sidebar": "bookSidebar",
   "previous": {
     "title": "Understanding ROS 2 Nodes",
-    "permalink": "/docs/module1/nodes"
+    "permalink": "/Ai-Native-Book-Course/docs/module1/nodes"
   },
   "next": {
     "title": "Understanding ROS 2 Services",
-    "permalink": "/docs/module1/services"
+    "permalink": "/Ai-Native-Book-Course/docs/module1/services"
   }
 }

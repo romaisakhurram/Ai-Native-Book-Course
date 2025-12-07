@@ -1,0 +1,24 @@
+{
+  "id": "module3/isaac-ros-perception",
+  "title": "Isaac ROS Fundamentals and Perception Modules",
+  "description": "This chapter explores NVIDIA Isaac ROS, a collection of hardware-accelerated packages for ROS 2 that enables high-performance AI perception for robots.",
+  "source": "@site/docs/module3/02-isaac-ros-perception.md",
+  "sourceDirName": "module3",
+  "slug": "/module3/isaac-ros-perception",
+  "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-ros-perception",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Isaac Sim Basics and Photorealistic Simulation",
+    "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-sim-basics"
+  },
+  "next": {
+    "title": "Creating a Basic Perception Pipeline with Isaac ROS",
+    "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-ros-pipeline"
+  }
+}

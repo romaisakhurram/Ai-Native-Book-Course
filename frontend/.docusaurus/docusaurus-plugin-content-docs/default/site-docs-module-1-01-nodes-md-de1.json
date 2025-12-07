@@ -1,25 +1,24 @@
 {
   "id": "module1/nodes",
   "title": "Understanding ROS 2 Nodes",
-  "description": "This chapter will explain what ROS 2 nodes are and how they are used.",
+  "description": "In ROS 2, a node is an executable process that performs computations. It's the fundamental building block of any ROS 2 system, representing a single logical unit of computation. Nodes can be thought of as individual programs or processes that work together to form a robotic application.",
   "source": "@site/docs/module1/01-nodes.md",
   "sourceDirName": "module1",
   "slug": "/module1/nodes",
-  "permalink": "/docs/module1/nodes",
+  "permalink": "/Ai-Native-Book-Course/docs/module1/nodes",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module1/01-nodes.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
   "frontMatter": {},
-  "sidebar": "tutorialSidebar",
+  "sidebar": "bookSidebar",
   "previous": {
     "title": "Setting up your ROS 2 Environment",
-    "permalink": "/docs/module1/setup"
+    "permalink": "/Ai-Native-Book-Course/docs/module1/setup"
   },
   "next": {
     "title": "Understanding ROS 2 Topics",
-    "permalink": "/docs/module1/topics"
+    "permalink": "/Ai-Native-Book-Course/docs/module1/topics"
   }
 }

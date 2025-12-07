@@ -5,23 +5,13 @@
   "source": "@site/docs/tutorial-basics/create-a-page.md",
   "sourceDirName": "tutorial-basics",
   "slug": "/tutorial-basics/create-a-page",
-  "permalink": "/docs/tutorial-basics/create-a-page",
+  "permalink": "/Ai-Native-Book-Course/docs/tutorial-basics/create-a-page",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorial-basics/create-a-page.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
   "frontMatter": {
     "sidebar_position": 1
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Tutorial - Basics",
-    "permalink": "/docs/category/tutorial---basics"
-  },
-  "next": {
-    "title": "Create a Document",
-    "permalink": "/docs/tutorial-basics/create-a-document"
   }
 }

@@ -1,6 +1,5 @@
 {
-  "permalink": "/blog/long-blog-post",
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-29-long-blog-post.md",
+  "permalink": "/Ai-Native-Book-Course/blog/long-blog-post",
   "source": "@site/blog/2019-05-29-long-blog-post.md",
   "title": "Long Blog Post",
   "description": "This is the summary of a very long blog post,",
@@ -9,13 +8,13 @@
     {
       "inline": false,
       "label": "Hello",
-      "permalink": "/blog/tags/hello",
+      "permalink": "/Ai-Native-Book-Course/blog/tags/hello",
       "description": "Hello tag description"
     },
     {
       "inline": false,
       "label": "Docusaurus",
-      "permalink": "/blog/tags/docusaurus",
+      "permalink": "/Ai-Native-Book-Course/blog/tags/docusaurus",
       "description": "Docusaurus tag description"
     }
   ],
@@ -27,7 +26,7 @@
       "title": "Ex-Meta Staff Engineer, Co-founder GreatFrontEnd",
       "url": "https://linkedin.com/in/yangshun",
       "page": {
-        "permalink": "/blog/authors/yangshun"
+        "permalink": "/Ai-Native-Book-Course/blog/authors/yangshun"
       },
       "socials": {
         "x": "https://x.com/yangshunz",
@@ -51,10 +50,10 @@
   "unlisted": false,
   "prevItem": {
     "title": "MDX Blog Post",
-    "permalink": "/blog/mdx-blog-post"
+    "permalink": "/Ai-Native-Book-Course/blog/mdx-blog-post"
   },
   "nextItem": {
     "title": "First Blog Post",
-    "permalink": "/blog/first-blog-post"
+    "permalink": "/Ai-Native-Book-Course/blog/first-blog-post"
   }
 }

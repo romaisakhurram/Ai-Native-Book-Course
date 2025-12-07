@@ -1,0 +1,24 @@
+{
+  "id": "module3/isaac-ros-pipeline",
+  "title": "Creating a Basic Perception Pipeline with Isaac ROS",
+  "description": "This chapter guides you through setting up a fundamental perception pipeline using NVIDIA Isaac ROS modules, and visualizing its output within Isaac Sim.",
+  "source": "@site/docs/module3/03-isaac-ros-pipeline.md",
+  "sourceDirName": "module3",
+  "slug": "/module3/isaac-ros-pipeline",
+  "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-ros-pipeline",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Isaac ROS Fundamentals and Perception Modules",
+    "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-ros-perception"
+  },
+  "next": {
+    "title": "Nav2 for Humanoids with Isaac Sim and VSLAM",
+    "permalink": "/Ai-Native-Book-Course/docs/module3/nav2-humanoid-isaac"
+  }
+}
