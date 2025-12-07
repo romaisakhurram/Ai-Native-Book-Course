@@ -1,55 +1,62 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 0.0.0 → 1.0.0
+- List of modified principles:
+  - [PRINCIPLE_1_NAME] → I. Technical Accuracy
+  - [PRINCIPLE_2_NAME] → II. Clear Explanations
+  - [PRINCIPLE_3_NAME] → III. Reproducibility
+  - [PRINCIPLE_4_NAME] → IV. Consistent Structure
+- Added sections:
+  - Key Standards
+  - Constraints and Success Criteria
+- Removed sections: None
+- Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md
+  - ✅ .specify/templates/spec-template.md
+  - ✅ .specify/templates/tasks-template.md
+  - ✅ .claude/commands/sp.plan.md
+- Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Technical Accuracy
+Technical accuracy across AI, robotics, and simulation is paramount. All descriptions must be correct for ROS 2, Gazebo, Unity, NVIDIA Isaac, Whisper, VSLAM, Nav2, and RAG systems.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clear Explanations
+The content must provide clear explanations for intermediate learners, ensuring complex topics are accessible without sacrificing technical depth.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Reproducibility
+All code and configuration examples must be runnable. Readers must be able to reproduce the book generation, deployment, chatbot setup, and the final capstone humanoid simulation from the provided steps alone.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Consistent Structure
+The project must maintain a consistent structure aligned with Spec-Kit Plus and Claude Code workflows to ensure predictability and maintainability. Chapters must align with the four modules and the final capstone.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Key Standards
 
-### [PRINCIPLE_6_NAME]
+- **Correctness:** All descriptions must be correct for ROS 2, Gazebo, Unity, NVIDIA Isaac, Whisper, VSLAM, Nav2, and RAG systems.
+- **Runnability:** Code and configuration examples must be runnable.
+- **Alignment:** Chapters must align with the four modules and final capstone.
+- **Chatbot Pattern:** The chatbot must follow OpenAI Agents/ChatKit SDK patterns with FastAPI, Neon, and Qdrant.
+- **Coherence:** Content must stay coherent across the whole book.
 
+## Constraints and Success Criteria
 
-[PRINCIPLE__DESCRIPTION]
+### Constraints
+- **Format:** Docusaurus book generated with Spec-Kit Plus.
+- **Deployment:** GitHub Pages with embedded RAG chatbot.
+- **Chatbot Scope:** Chatbot responses must rely only on book content or selected text.
+- **Coverage:** The book must cover all four modules plus a reproducible capstone walkthrough.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Success Criteria
+- The book builds and deploys without errors.
+- The RAG chatbot retrieval and answering work end-to-end.
+- Readers can run ROS 2 basics, simulations, and perception pipelines.
+- The capstone humanoid simulation can be reproduced from the book alone.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Amendments to this constitution require a documented proposal, review, and an approved migration plan. All development artifacts and pull requests must verify compliance with these principles. Complexity must be justified, and deviations require explicit sign-off.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07

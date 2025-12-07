@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="basic_digital_twin_world">
+    <gravity>0 0 -9.8</gravity>
+
+    <!-- Sun light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Our basic robot digital twin -->
+    <include>
+      <uri>file://basic_robot.urdf</uri>
+      <name>basic_robot</name>
+      <pose>0 0 0.5 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>

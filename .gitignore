@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+.env*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+
+# C++
+build/
+bin/
+obj/
+out/
+*.o
+*.a
+*.so
+*.exe
+.idea/
+*.log
+.env*
+
+# C#
+bin/
+obj/
+*.user
+*.suo
+packages/
+
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/

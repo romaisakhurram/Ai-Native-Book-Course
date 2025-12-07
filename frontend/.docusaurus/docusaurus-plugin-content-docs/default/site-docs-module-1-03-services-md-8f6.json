@@ -1,0 +1,25 @@
+{
+  "id": "module1/services",
+  "title": "Understanding ROS 2 Services",
+  "description": "This chapter will explain what ROS 2 services are and how they are used for request-response communication.",
+  "source": "@site/docs/module1/03-services.md",
+  "sourceDirName": "module1",
+  "slug": "/module1/services",
+  "permalink": "/docs/module1/services",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module1/03-services.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Understanding ROS 2 Topics",
+    "permalink": "/docs/module1/topics"
+  },
+  "next": {
+    "title": "Controlling ROS 2 with Python using rclpy",
+    "permalink": "/docs/module1/rclpy-basics"
+  }
+}
