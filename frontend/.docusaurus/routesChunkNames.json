@@ -1,396 +1,353 @@
 {
-  "/Ai-Native-Book-Course/__docusaurus/debug-277": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---ai-native-book-course-docusaurus-debugb-38-216"
-    }
-  },
-  "/Ai-Native-Book-Course/__docusaurus/debug/config-a84": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---ai-native-book-course-docusaurus-debugb-38-216"
-    }
-  },
-  "/Ai-Native-Book-Course/__docusaurus/debug/content-2ea": {
-    "__comp": "__comp---theme-debug-contentba-8-ce7",
-    "__context": {
-      "plugin": "plugin---ai-native-book-course-docusaurus-debugb-38-216"
-    },
-    "__props": "__props---ai-native-book-course-docusaurus-debug-contentd-9-b-a77"
-  },
-  "/Ai-Native-Book-Course/__docusaurus/debug/globalData-f40": {
-    "__comp": "__comp---theme-debug-global-dataede-0fa",
-    "__context": {
-      "plugin": "plugin---ai-native-book-course-docusaurus-debugb-38-216"
-    }
-  },
-  "/Ai-Native-Book-Course/__docusaurus/debug/metadata-07f": {
-    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
-    "__context": {
-      "plugin": "plugin---ai-native-book-course-docusaurus-debugb-38-216"
-    }
-  },
-  "/Ai-Native-Book-Course/__docusaurus/debug/registry-561": {
-    "__comp": "__comp---theme-debug-registry-679-501",
-    "__context": {
-      "plugin": "plugin---ai-native-book-course-docusaurus-debugb-38-216"
-    }
-  },
-  "/Ai-Native-Book-Course/__docusaurus/debug/routes-31c": {
-    "__comp": "__comp---theme-debug-routes-946-699",
-    "__context": {
-      "plugin": "plugin---ai-native-book-course-docusaurus-debugb-38-216"
-    }
-  },
   "/Ai-Native-Book-Course/blog-a40": {
-    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__comp": "a6aa9e1f",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---ai-native-book-course-blog-766-e64"
+        "content": "7661071f"
       },
       {
-        "content": "content---ai-native-book-course-blogf-4-f-a08"
+        "content": "f4f34a3a"
       },
       {
-        "content": "content---ai-native-book-course-blog-871-79f"
+        "content": "8717b14a"
       },
       {
-        "content": "content---ai-native-book-course-blog-925-a31"
+        "content": "925b3f96"
       }
     ],
-    "__props": "__props---ai-native-book-course-blog-69-e-4af"
+    "__props": "69e3d8f5"
   },
   "/Ai-Native-Book-Course/blog/archive-671": {
-    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
+    "__comp": "9e4087bc",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "__props": "__props---ai-native-book-course-blog-archive-074-0c8"
+    "__props": "0747918a"
   },
   "/Ai-Native-Book-Course/blog/authors-075": {
-    "__comp": "__comp---theme-blog-pages-blog-authors-list-page-621-70c",
+    "__comp": "621db11d",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---ai-native-book-course-blog-authorsace-9eb"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
-    "__props": "__props---ai-native-book-course-blog-authorsc-6-d-08e"
+    "sidebar": "814f3328",
+    "__props": "c6dc534c"
   },
   "/Ai-Native-Book-Course/blog/authors/all-sebastien-lorber-articles-eeb": {
-    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
+    "__comp": "33fc5bb8",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---ai-native-book-course-blog-authorsace-9eb"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
     "items": [
       {
-        "content": "content---ai-native-book-course-blog-766-e64"
+        "content": "7661071f"
       },
       {
-        "content": "content---ai-native-book-course-blogf-4-f-a08"
+        "content": "f4f34a3a"
       },
       {
-        "content": "content---ai-native-book-course-blog-925-a31"
+        "content": "925b3f96"
       }
     ],
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
-    "__props": "__props---ai-native-book-course-blog-authors-all-sebastien-lorber-articlesd-7-e-2a3"
+    "sidebar": "814f3328",
+    "__props": "d7eabe2a"
   },
   "/Ai-Native-Book-Course/blog/authors/yangshun-e54": {
-    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
+    "__comp": "33fc5bb8",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---ai-native-book-course-blog-authorsace-9eb"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
     "items": [
       {
-        "content": "content---ai-native-book-course-blog-766-e64"
+        "content": "7661071f"
       },
       {
-        "content": "content---ai-native-book-course-blog-871-79f"
+        "content": "8717b14a"
       },
       {
-        "content": "content---ai-native-book-course-blog-925-a31"
+        "content": "925b3f96"
       }
     ],
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
-    "__props": "__props---ai-native-book-course-blog-authors-yangshunc-2-f-c90"
+    "sidebar": "814f3328",
+    "__props": "c2f45d68"
   },
   "/Ai-Native-Book-Course/blog/first-blog-post-76b": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---ai-native-book-course-blog-authorsace-9eb"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
-    "content": "content---ai-native-book-course-blog-first-blog-poste-27-464"
+    "sidebar": "814f3328",
+    "content": "e273c56f"
   },
   "/Ai-Native-Book-Course/blog/long-blog-post-3e8": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---ai-native-book-course-blog-authorsace-9eb"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
-    "content": "content---ai-native-book-course-blog-long-blog-post-736-97f"
+    "sidebar": "814f3328",
+    "content": "73664a40"
   },
   "/Ai-Native-Book-Course/blog/mdx-blog-post-86b": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---ai-native-book-course-blog-authorsace-9eb"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
-    "content": "content---ai-native-book-course-blog-mdx-blog-post-593-b67"
+    "sidebar": "814f3328",
+    "content": "59362658"
   },
   "/Ai-Native-Book-Course/blog/tags-aca": {
-    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
+    "__comp": "01a85c17",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
-    "__props": "__props---ai-native-book-course-blog-tagsc-52-936"
+    "sidebar": "814f3328",
+    "__props": "c5279e24"
   },
   "/Ai-Native-Book-Course/blog/tags/docusaurus-2c3": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---ai-native-book-course-blog-766-e64"
+        "content": "7661071f"
       },
       {
-        "content": "content---ai-native-book-course-blogf-4-f-a08"
+        "content": "f4f34a3a"
       },
       {
-        "content": "content---ai-native-book-course-blog-871-79f"
+        "content": "8717b14a"
       },
       {
-        "content": "content---ai-native-book-course-blog-925-a31"
+        "content": "925b3f96"
       }
     ],
-    "__props": "__props---ai-native-book-course-blog-tags-docusaurus-987-3a5"
+    "__props": "987e53f1"
   },
   "/Ai-Native-Book-Course/blog/tags/facebook-085": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---ai-native-book-course-blog-766-e64"
+        "content": "7661071f"
       }
     ],
-    "__props": "__props---ai-native-book-course-blog-tags-facebook-44-b-ee2"
+    "__props": "44b902cc"
   },
   "/Ai-Native-Book-Course/blog/tags/hello-8e3": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---ai-native-book-course-blog-766-e64"
+        "content": "7661071f"
       },
       {
-        "content": "content---ai-native-book-course-blog-871-79f"
+        "content": "8717b14a"
       }
     ],
-    "__props": "__props---ai-native-book-course-blog-tags-hellofd-2-ea2"
+    "__props": "fd2f8e48"
   },
   "/Ai-Native-Book-Course/blog/tags/hola-fea": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---ai-native-book-course-blog-925-a31"
+        "content": "925b3f96"
       }
     ],
-    "__props": "__props---ai-native-book-course-blog-tags-holac-48-f5b"
+    "__props": "c4857a34"
   },
   "/Ai-Native-Book-Course/blog/welcome-76d": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---ai-native-book-course-blog-authorsace-9eb"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---ai-native-book-course-blog-369-e85"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---ai-native-book-course-blog-814-2a1",
-    "content": "content---ai-native-book-course-blog-welcomed-9-f-c3a"
+    "sidebar": "814f3328",
+    "content": "d9f32620"
   },
   "/Ai-Native-Book-Course/markdown-page-699": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__comp": "1f391b9e",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-markdown-pagea-74-0fc"
+      "plugin": "a7456010"
     },
-    "content": "content---ai-native-book-course-markdown-page-393-265"
+    "content": "393be207"
   },
   "/Ai-Native-Book-Course/docs-3de": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-docsaba-a9c"
+      "plugin": "aba21aa0"
     }
   },
   "/Ai-Native-Book-Course/docs-33b": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---ai-native-book-course-docs-255-e70"
+    "__comp": "a7bd4aaa",
+    "__props": "2556eefe"
   },
   "/Ai-Native-Book-Course/docs-743": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/Ai-Native-Book-Course/docs/intro-69c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-intro-0-e-3-ff2"
+    "__comp": "17896441",
+    "content": "0e384e19"
   },
   "/Ai-Native-Book-Course/docs/module1/nodes-93c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-1-nodesde-1-c3f"
+    "__comp": "17896441",
+    "content": "de100b4a"
   },
   "/Ai-Native-Book-Course/docs/module1/rclpy-basics-156": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-1-rclpy-basics-9-a-0-7b4"
+    "__comp": "17896441",
+    "content": "9a0333fe"
   },
   "/Ai-Native-Book-Course/docs/module1/services-a50": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-1-services-8-f-6-45b"
+    "__comp": "17896441",
+    "content": "8f63617b"
   },
   "/Ai-Native-Book-Course/docs/module1/setup-2bd": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-1-setup-7-e-3-abd"
+    "__comp": "17896441",
+    "content": "7e3e33e2"
   },
   "/Ai-Native-Book-Course/docs/module1/topics-ff1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-1-topics-120-e0a"
+    "__comp": "17896441",
+    "content": "12080dd4"
   },
   "/Ai-Native-Book-Course/docs/module1/urdf-basics-cf1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-1-urdf-basics-512-77d"
+    "__comp": "17896441",
+    "content": "512b32e1"
   },
   "/Ai-Native-Book-Course/docs/module2/gazebo-digital-twin-54b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-2-gazebo-digital-twin-1-d-4-117"
+    "__comp": "17896441",
+    "content": "1d43de67"
   },
   "/Ai-Native-Book-Course/docs/module2/physics-collision-ae0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-2-physics-collisionf-81-a00"
+    "__comp": "17896441",
+    "content": "f8113fe8"
   },
   "/Ai-Native-Book-Course/docs/module2/sensor-sim-1a2": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-2-sensor-simae-9-b28"
+    "__comp": "17896441",
+    "content": "ae9ff2e5"
   },
   "/Ai-Native-Book-Course/docs/module2/setup-gazebo-adb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-2-setup-gazebob-7-c-818"
+    "__comp": "17896441",
+    "content": "b7c9ec7e"
   },
   "/Ai-Native-Book-Course/docs/module2/setup-unity-3d4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-2-setup-unityd-93-efc"
+    "__comp": "17896441",
+    "content": "d93a0d77"
   },
   "/Ai-Native-Book-Course/docs/module2/unity-hri-ba0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-2-unity-hri-407-2df"
+    "__comp": "17896441",
+    "content": "407ed577"
   },
   "/Ai-Native-Book-Course/docs/module3/isaac-ros-perception-812": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-3-isaac-ros-perceptionad-5-0dc"
+    "__comp": "17896441",
+    "content": "ad58bcaa"
   },
   "/Ai-Native-Book-Course/docs/module3/isaac-ros-pipeline-0b4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-3-isaac-ros-pipelinee-14-8a1"
+    "__comp": "17896441",
+    "content": "e14129a3"
   },
   "/Ai-Native-Book-Course/docs/module3/isaac-sim-basics-0e7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-3-isaac-sim-basics-9-d-8-3f5"
+    "__comp": "17896441",
+    "content": "9d84655d"
   },
   "/Ai-Native-Book-Course/docs/module3/nav2-humanoid-isaac-3d7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-3-nav-2-humanoid-isaac-7-cb-562"
+    "__comp": "17896441",
+    "content": "7cb7f37e"
   },
   "/Ai-Native-Book-Course/docs/module3/setup-isaac-f18": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-3-setup-isaac-387-e6c"
+    "__comp": "17896441",
+    "content": "3879fd3b"
   },
   "/Ai-Native-Book-Course/docs/module4/capstone-architecture-932": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-4-capstone-architecture-44-a-24c"
+    "__comp": "17896441",
+    "content": "44ad132f"
   },
   "/Ai-Native-Book-Course/docs/module4/intro-2dc": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-4-introb-6-a-d4e"
+    "__comp": "17896441",
+    "content": "b6a7eda7"
   },
   "/Ai-Native-Book-Course/docs/module4/llm-planning-63d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-4-llm-planning-97-b-488"
+    "__comp": "17896441",
+    "content": "97bf3ed7"
   },
   "/Ai-Native-Book-Course/docs/module4/ros2-mapping-9c0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-4-ros-2-mappingdd-1-1ac"
+    "__comp": "17896441",
+    "content": "dd18dcb7"
   },
   "/Ai-Native-Book-Course/docs/module4/whisper-vision-c19": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-module-4-whisper-visionb-12-138"
+    "__comp": "17896441",
+    "content": "b122182c"
   },
   "/Ai-Native-Book-Course/docs/tutorial-basics/congratulations-cfb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-tutorial-basics-congratulations-822-e0f"
+    "__comp": "17896441",
+    "content": "822bd8ab"
   },
   "/Ai-Native-Book-Course/docs/tutorial-basics/create-a-blog-post-a4e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-tutorial-basics-create-a-blog-post-533-a45"
+    "__comp": "17896441",
+    "content": "533a09ca"
   },
   "/Ai-Native-Book-Course/docs/tutorial-basics/create-a-document-162": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-tutorial-basics-create-a-document-1-e-4-f64"
+    "__comp": "17896441",
+    "content": "1e4232ab"
   },
   "/Ai-Native-Book-Course/docs/tutorial-basics/create-a-page-d19": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-tutorial-basics-create-a-page-5-c-8-942"
+    "__comp": "17896441",
+    "content": "5c868d36"
   },
   "/Ai-Native-Book-Course/docs/tutorial-basics/deploy-your-site-542": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-tutorial-basics-deploy-your-sitef-55-27c"
+    "__comp": "17896441",
+    "content": "f55d3e7a"
   },
   "/Ai-Native-Book-Course/docs/tutorial-basics/markdown-features-cd7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-tutorial-basics-markdown-features-18-c-123"
+    "__comp": "17896441",
+    "content": "18c41134"
   },
   "/Ai-Native-Book-Course/docs/tutorial-extras/manage-docs-versions-bd8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-tutorial-extras-manage-docs-versionsdff-5f5"
+    "__comp": "17896441",
+    "content": "dff1c289"
   },
   "/Ai-Native-Book-Course/docs/tutorial-extras/translate-your-site-f9e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ai-native-book-course-docs-tutorial-extras-translate-your-sitee-44-6c1"
+    "__comp": "17896441",
+    "content": "e44a2883"
   },
   "/Ai-Native-Book-Course/-8bc": {
-    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
+    "__comp": "1df93b7f",
     "__context": {
-      "plugin": "plugin---ai-native-book-course-markdown-pagea-74-0fc"
+      "plugin": "a7456010"
     },
-    "config": "config---ai-native-book-course-5-e-9-a13"
+    "config": "5e9f5e1a"
   }
 }

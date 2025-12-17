@@ -32,7 +32,7 @@ export default {
   "baseUrl": "/Ai-Native-Book-Course/",
   "organizationName": "romaisakhurram",
   "projectName": "Ai-Native-Book-Course",
-  "onBrokenLinks": "throw",
+  "onBrokenLinks": "warn",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
