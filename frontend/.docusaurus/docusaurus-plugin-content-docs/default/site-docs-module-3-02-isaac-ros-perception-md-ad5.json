@@ -1,7 +1,7 @@
 {
   "id": "module3/isaac-ros-perception",
   "title": "Isaac ROS Fundamentals and Perception Modules",
-  "description": "This chapter explores NVIDIA Isaac ROS, a collection of hardware-accelerated packages for ROS 2 that enables high-performance AI perception for robots.",
+  "description": "This chapter explores NVIDIA Isaac ROS, a collection of hardware-accelerated packages for ROS 2 that enables high-performance AI perception for robots. Leveraging NVIDIA GPUs, Isaac ROS significantly boosts the capabilities of robotic systems by providing optimized modules for tasks like image processing, depth estimation, and object detection.",
   "source": "@site/docs/module3/02-isaac-ros-perception.md",
   "sourceDirName": "module3",
   "slug": "/module3/isaac-ros-perception",

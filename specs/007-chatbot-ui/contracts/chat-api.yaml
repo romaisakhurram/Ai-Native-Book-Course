@@ -1,0 +1,178 @@
+openapi: 3.0.0
+info:
+  title: Book Chatbot API
+  description: API for the embedded RAG chatbot in the book website
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000/api/v1
+    description: Development server
+  - url: https://book-website.com/api/v1
+    description: Production server
+
+paths:
+  /chat/start:
+    post:
+      summary: Start a new chat session
+      description: Creates a new chat session and returns the session ID
+      responses:
+        '200':
+          description: Session started successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sessionId:
+                    type: string
+                    description: Unique identifier for the chat session
+                    example: "sess-abc123xyz"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    description: When the session was created
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /chat/send:
+    post:
+      summary: Send a message in the chat session
+      description: Sends a user message to the chatbot and returns the AI response
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: Message processed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '400':
+          description: Invalid request parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /chat/stream:
+    post:
+      summary: Send a message and stream the response
+      description: Sends a user message and streams the AI response in real-time. Implements message queuing for service unavailability.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: Streaming response with Server-Sent Events
+          content:
+            text/event-stream:
+              schema:
+                type: object
+                properties:
+                  content:
+                    type: string
+                    description: The response content chunk
+                  done:
+                    type: boolean
+                    description: Whether the response is complete
+                  status:
+                    type: string
+                    enum: [success, error, queued]
+                    description: The status of the message processing
+        '400':
+          description: Invalid request parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error (message queued for later processing)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    ChatRequest:
+      type: object
+      required:
+        - message
+        - sessionId
+      properties:
+        message:
+          type: string
+          description: The message from the user
+          example: "Can you explain the concept of RAG in this context?"
+          maxLength: 10000  # Allow for longer messages with context
+        sessionId:
+          type: string
+          description: The ID of the current chat session
+          example: "sess-abc123xyz"
+        context:
+          $ref: '#/components/schemas/MessageContext'
+
+    MessageContext:
+      type: object
+      properties:
+        selectedText:
+          type: string
+          description: Text selected by the user in the book (max 500 words)
+          example: "Retrieval-Augmented Generation (RAG) is a technique that..."
+          maxLength: 2500  # Approx 500 words at 5 chars per word
+        sourcePage:
+          type: string
+          description: The page URL or identifier where text was selected
+          example: "/chapter-3/understanding-rag"
+
+    ChatResponse:
+      type: object
+      properties:
+        responseId:
+          type: string
+          description: Unique identifier for this response
+          example: "resp-xyz789abc"
+        content:
+          type: string
+          description: The AI-generated response content
+          example: "RAG combines retrieval and generation to provide more accurate and contextually relevant responses."
+        timestamp:
+          type: string
+          format: date-time
+          description: When the response was generated
+        status:
+          type: string
+          enum: [success, error]
+          description: The status of the response generation
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: "Invalid session ID"
+        code:
+          type: string
+          description: Error code
+          example: "INVALID_SESSION"
+        details:
+          type: object
+          description: Additional error details
+          example: {"session_id": "required"}

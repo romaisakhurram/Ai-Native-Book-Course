@@ -70,7 +70,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/book.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -78,7 +78,7 @@ const config: Config = {
       title: 'Physical AI & Humanoid Robotics',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.jpg',
       },
       items: [
         {
@@ -89,7 +89,7 @@ const config: Config = {
         },
         // {to: '/blog', label: 'Blog', position: 'left'}, // Removed blog link
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/romaisakhurram/Ai-Native-Book-Course',
           label: 'GitHub',
           position: 'right',
         },
@@ -122,6 +122,10 @@ const config: Config = {
               label: 'X',
               href: 'https://x.com/docusaurus',
             },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/romaisa-khurram123',
+            },
           ],
         },
         {
@@ -133,7 +137,7 @@ const config: Config = {
             // },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/romaisakhurram/Ai-Native-Book-Course',
             },
           ],
         },

@@ -1,7 +1,7 @@
 {
   "id": "module2/physics-collision",
   "title": "Physics Simulation and Collision Modeling",
-  "description": "This chapter explores the fundamentals of physics simulation and collision modeling in the context of robot digital twins.",
+  "description": "This chapter explores the fundamentals of physics simulation and collision modeling in the context of robot digital twins. Accurate simulation of physical interactions is critical for developing and testing robots safely and efficiently in a virtual environment before deploying them in the real world.",
   "source": "@site/docs/module2/01-physics-collision.md",
   "sourceDirName": "module2",
   "slug": "/module2/physics-collision",

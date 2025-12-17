@@ -14,7 +14,7 @@
   "frontMatter": {},
   "sidebar": "bookSidebar",
   "previous": {
-    "title": "Controlling ROS 2 with Python using rclpy",
+    "title": "rclpy Basics: Building Robust ROS 2 Nodes in Python",
     "permalink": "/Ai-Native-Book-Course/docs/module1/rclpy-basics"
   },
   "next": {

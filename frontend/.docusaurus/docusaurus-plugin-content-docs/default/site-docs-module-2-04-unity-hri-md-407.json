@@ -1,7 +1,7 @@
 {
   "id": "module2/unity-hri",
   "title": "Unity for Robot Visualization and Human-Robot Interaction",
-  "description": "Unity is a powerful platform for creating interactive 3D environments, making it ideal for visualizing robot digital twins and developing intuitive human-robot interfaces.",
+  "description": "Unity is a powerful platform for creating interactive 3D environments, making it ideal for visualizing robot digital twins and developing intuitive human-robot interfaces (HRI). This chapter guides you through using Unity for robot visualization and implementing basic HRI, specifically focusing on how to integrate with ROS 2 for sending commands.",
   "source": "@site/docs/module2/04-unity-hri.md",
   "sourceDirName": "module2",
   "slug": "/module2/unity-hri",

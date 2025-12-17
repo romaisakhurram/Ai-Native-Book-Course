@@ -1,7 +1,7 @@
 {
   "id": "module2/setup-gazebo",
   "title": "Setting up ROS 2 and Gazebo for Digital Twin Simulation",
-  "description": "This chapter provides a foundational guide for setting up your development environment to work with ROS 2 and Gazebo for robot simulation. A robust setup is crucial for building and interacting with digital twins.",
+  "description": "This chapter provides a foundational guide for setting up your development environment to work with ROS 2 and Gazebo for robot simulation. A robust setup is crucial for building and interacting with digital twins, allowing you to develop and test robot behaviors in a virtual environment.",
   "source": "@site/docs/module2/00-setup-gazebo.md",
   "sourceDirName": "module2",
   "slug": "/module2/setup-gazebo",

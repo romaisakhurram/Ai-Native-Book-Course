@@ -68,7 +68,7 @@ export default {
     ]
   ],
   "themeConfig": {
-    "image": "img/docusaurus-social-card.jpg",
+    "image": "img/book.jpg",
     "colorMode": {
       "respectPrefersColorScheme": true,
       "defaultMode": "light",
@@ -78,7 +78,7 @@ export default {
       "title": "Physical AI & Humanoid Robotics",
       "logo": {
         "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "src": "img/logo.jpg"
       },
       "items": [
         {
@@ -88,7 +88,7 @@ export default {
           "label": "Book"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/romaisakhurram/Ai-Native-Book-Course",
           "label": "GitHub",
           "position": "right"
         }
@@ -121,6 +121,10 @@ export default {
             {
               "label": "X",
               "href": "https://x.com/docusaurus"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "https://www.linkedin.com/in/romaisa-khurram123"
             }
           ]
         },
@@ -129,7 +133,7 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/romaisakhurram/Ai-Native-Book-Course"
             }
           ]
         }

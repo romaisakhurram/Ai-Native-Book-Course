@@ -1,0 +1,254 @@
+openapi: 3.0.1
+info:
+  title: RAG Chatbot API for Markdown Book
+  description: API for a Retrieval-Augmented Generation chatbot that answers questions based on book content
+  version: 1.0.0
+paths:
+  /sessions:
+    post:
+      summary: Create a new chat session
+      description: Creates a new chat session for a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SessionCreateRequest'
+      responses:
+        '201':
+          description: Session created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionCreateResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  
+  /sessions/{session_id}:
+    get:
+      summary: Get session details
+      description: Retrieve details about a specific chat session
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Session details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  
+  /sessions/{session_id}/queries:
+    post:
+      summary: Submit a query in a session
+      description: Submit a question to the chatbot within a session
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QueryRequest'
+      responses:
+        '201':
+          description: Query processed and response generated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  
+  /sessions/{session_id}/queries/{query_id}:
+    get:
+      summary: Get a specific query and its response
+      description: Retrieve a previously asked question and its answer
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: query_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Query and response retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /health:
+    get:
+      summary: Health check
+      description: Check if the API is running
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "healthy"
+
+components:
+  schemas:
+    SessionCreateRequest:
+      type: object
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          description: Optional user identifier for logged-in users
+          example: "550e8400-e29b-41d4-a716-446655440000"
+      required:
+        - user_id
+    
+    SessionCreateResponse:
+      type: object
+      properties:
+        session_id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440001"
+        created_at:
+          type: string
+          format: date-time
+          example: "2023-01-01T00:00:00Z"
+    
+    SessionResponse:
+      type: object
+      properties:
+        session_id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440001"
+        user_id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        created_at:
+          type: string
+          format: date-time
+          example: "2023-01-01T00:00:00Z"
+        updated_at:
+          type: string
+          format: date-time
+          example: "2023-01-01T00:05:00Z"
+        is_active:
+          type: boolean
+          example: true
+    
+    QueryRequest:
+      type: object
+      properties:
+        query_text:
+          type: string
+          description: The question the user is asking
+          example: "What are the main components of a ROS 2 node?"
+        query_mode:
+          type: string
+          enum: [FULL_BOOK, SELECTED_TEXT_ONLY]
+          description: Whether to search the full book or only the selected text
+          example: "FULL_BOOK"
+        selected_text:
+          type: string
+          description: Text selected by the user (required when query_mode is SELECTED_TEXT_ONLY)
+          example: "A ROS 2 node is a process that performs computation. Nodes are the fundamental building blocks of a ROS 2 system."
+      required:
+        - query_text
+        - query_mode
+    
+    QueryResponse:
+      type: object
+      properties:
+        query_id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440002"
+        session_id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440001"
+        query_text:
+          type: string
+          example: "What are the main components of a ROS 2 node?"
+        response_text:
+          type: string
+          example: "According to the book, the main components of a ROS 2 node include the executor, which manages the execution of callbacks, and the node interface which allows the node to interact with the ROS graph."
+        source_chunks:
+          type: array
+          items:
+            type: object
+            properties:
+              chunk_id:
+                type: string
+                example: "550e8400-e29b-41d4-a716-446655440003"
+              content:
+                type: string
+                example: "A ROS 2 node consists of publishers, subscribers, services, and actions that allow it to communicate with other nodes."
+              document_id:
+                type: string
+                example: "module1/01-nodes.md"
+              metadata:
+                type: object
+                description: Additional metadata associated with the content chunk
+        timestamp:
+          type: string
+          format: date-time
+          example: "2023-01-01T00:05:30Z"
+      required:
+        - query_id
+        - session_id
+        - query_text
+        - response_text
+        - timestamp
+
+  responses:
+    BadRequest:
+      description: Bad request - invalid input
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: "Invalid input parameters"
+    
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: "Session not found"

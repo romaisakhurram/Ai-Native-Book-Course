@@ -1,7 +1,7 @@
 {
   "id": "module1/rclpy-basics",
-  "title": "Controlling ROS 2 with Python using rclpy",
-  "description": "This chapter will teach you how to use the rclpy library to create ROS 2 nodes, publishers, and subscribers in Python.",
+  "title": "rclpy Basics: Building Robust ROS 2 Nodes in Python",
+  "description": "This chapter delves into the fundamental aspects of rclpy, the Python client library for ROS 2. You will learn how to initialize and structure ROS 2 nodes, manage parameters, and understand the lifecycle of a ROS 2 application written in Python. This chapter complements the previous discussions on nodes, topics, and services by focusing on the rclpy programming interface.",
   "source": "@site/docs/module1/04-rclpy-basics.md",
   "sourceDirName": "module1",
   "slug": "/module1/rclpy-basics",

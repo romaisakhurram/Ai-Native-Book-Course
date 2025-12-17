@@ -1,0 +1,111 @@
+import asyncio
+from typing import Optional, Dict, Any, AsyncGenerator
+from models.chat_models import MessageContext
+import time
+
+
+class RAGService:
+    """
+    RAG (Retrieval-Augmented Generation) Service
+    Handles the processing of queries with context, especially selected text
+    """
+
+    def __init__(self):
+        # In a real implementation, this would connect to Qdrant or similar vector database
+        # For this example, we'll simulate the process
+        # We'll also maintain a simple in-memory session cache for demonstration
+        self.session_cache: Dict[str, Any] = {}
+
+    def _get_session_data(self, session_id: str) -> Dict[str, Any]:
+        """Get or create session data for the given session ID"""
+        if session_id not in self.session_cache:
+            self.session_cache[session_id] = {
+                "created_at": time.time(),
+                "last_accessed": time.time(),
+                "conversation_history": []
+            }
+        self.session_cache[session_id]["last_accessed"] = time.time()
+        return self.session_cache[session_id]
+    
+    async def is_available(self) -> bool:
+        """
+        Check if the RAG service is available
+        """
+        # Simulate availability check
+        # In a real implementation, this would check connectivity to required services
+        return True
+    
+    async def process_query(
+        self,
+        query: str,
+        session_id: str,
+        context: Optional[MessageContext] = None
+    ) -> str:
+        """
+        Process a query with optional context
+        """
+        # Get session data to maintain conversation history
+        session_data = self._get_session_data(session_id)
+
+        # Simulate processing delay
+        await asyncio.sleep(0.5)
+
+        # In a real implementation, this would:
+        # 1. Retrieve relevant documents from vector store based on query and context
+        # 2. Pass the query, context, and retrieved documents to an LLM
+        # 3. Return the generated response
+
+        # For this example, we'll return a simulated response
+        if context and context.selectedText:
+            # Process with selected text context
+            response = (f"I can help you with your question about: '{query}'. "
+                       f"The selected text you provided is: '{context.selectedText[:100]}...' "
+                       f"Based on the book content and this context, here's my response.")
+        else:
+            # Process without specific context
+            response = f"I can help you with your question: '{query}'. Based on the book content and this context, here's my response."
+
+        # Add this interaction to the conversation history
+        session_data["conversation_history"].append({
+            "query": query,
+            "context": context.dict() if context else None,
+            "response": response,
+            "timestamp": time.time()
+        })
+
+        # Limit history to prevent it from growing indefinitely
+        if len(session_data["conversation_history"]) > 50:  # Keep last 50 interactions
+            session_data["conversation_history"] = session_data["conversation_history"][-50:]
+
+        return response
+    
+    async def stream_response(
+        self, 
+        query: str, 
+        session_id: str, 
+        context: Optional[MessageContext] = None
+    ) -> AsyncGenerator[str, None]:
+        """
+        Stream response tokens as they are generated
+        """
+        # Simulate streaming by sending tokens one by one
+        response = await self.process_query(query, session_id, context)
+        tokens = response.split()
+        
+        for i, token in enumerate(tokens):
+            # Simulate processing delay for each token
+            await asyncio.sleep(0.05)  # 50ms delay per token
+            
+            # Add space after token, except for the last one
+            yield f"{token} " if i < len(tokens) - 1 else token
+    
+    async def retrieve_context(self, query: str, selected_text: Optional[str] = None) -> str:
+        """
+        Retrieve relevant context from the book content
+        """
+        # In a real implementation, this would query the vector database
+        # For this example, we'll return a placeholder
+        if selected_text:
+            return f"Context from selected text: {selected_text[:200]}..."
+        else:
+            return "General context from the book..."

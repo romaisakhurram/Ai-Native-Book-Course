@@ -101,8 +101,28 @@
               "sidebar": "bookSidebar"
             },
             {
-              "id": "preface",
-              "path": "/Ai-Native-Book-Course/docs/preface",
+              "id": "module4/capstone-architecture",
+              "path": "/Ai-Native-Book-Course/docs/module4/capstone-architecture",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module4/intro",
+              "path": "/Ai-Native-Book-Course/docs/module4/intro",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module4/llm-planning",
+              "path": "/Ai-Native-Book-Course/docs/module4/llm-planning",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module4/ros2-mapping",
+              "path": "/Ai-Native-Book-Course/docs/module4/ros2-mapping",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "module4/whisper-vision",
+              "path": "/Ai-Native-Book-Course/docs/module4/whisper-vision",
               "sidebar": "bookSidebar"
             },
             {

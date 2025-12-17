@@ -1,0 +1,120 @@
+# API Contract: RAG Chatbot for Book Module 1
+
+## Overview
+This API contract defines the interface for the RAG (Retrieval-Augmented Generation) chatbot that will work with the book content for Module 1.
+
+## Endpoints
+
+### POST /api/chat
+Initiates a conversation or continues an existing one with the book-focused assistant.
+
+#### Request
+```json
+{
+  "query": "string (the user's question about the book content)",
+  "context": {
+    "module": "string (optional, e.g., 'Module 1')",
+    "chapter": "string (optional, e.g., 'ROS 2 Architecture')",
+    "selected_text": "string (optional, text the user has selected)"
+  },
+  "session_id": "string (optional, for maintaining conversation context)"
+}
+```
+
+#### Response
+```json
+{
+  "response": "string (the assistant's answer based on book content)",
+  "sources": [
+    {
+      "title": "string (e.g., 'Module 1: Architecture')",
+      "url": "string (URL to the relevant section)",
+      "confidence": "number (0-1, how confident the system is)"
+    }
+  ],
+  "session_id": "string (the session ID for continued conversation)"
+}
+```
+
+#### Error Response
+```json
+{
+  "error": "string (error message)",
+  "code": "string (error code)"
+}
+```
+
+### POST /api/search
+Searches the book content for relevant information.
+
+#### Request
+```json
+{
+  "query": "string (the search query)",
+  "filters": {
+    "module": "string (optional, e.g., 'Module 1')",
+    "chapter": "string (optional, e.g., 'ROS 2 Architecture')",
+    "max_results": "number (optional, default 5)"
+  }
+}
+```
+
+#### Response
+```json
+{
+  "results": [
+    {
+      "title": "string (title of the matching content)",
+      "url": "string (URL to the content)",
+      "content": "string (text snippet of the relevant content)",
+      "module": "string (which module this content is from)",
+      "chapter": "string (which chapter this content is from)",
+      "confidence": "number (0-1, how relevant the content is)"
+    }
+  ]
+}
+```
+
+## Content Schema
+This section describes the structure of the book content that the API will work with.
+
+### Book Content Document
+```json
+{
+  "id": "string (unique identifier for the content piece)",
+  "title": "string (title of the section)",
+  "module": "string (e.g., 'Module 1: The Robotic Nervous System (ROS 2)')",
+  "chapter": "string (e.g., '01-architecture.md')",
+  "content": "string (the full text content)",
+  "summary": "string (brief summary of the content)",
+  "tags": ["string", ...] (list of relevant tags),
+  "prerequisites": ["string", ...] (what the reader should know before reading),
+  "learning_objectives": ["string", ...] (what the reader will learn),
+  "diagrams": [
+    {
+      "id": "string",
+      "title": "string",
+      "description": "string"
+    }
+  ],
+  "code_examples": [
+    {
+      "id": "string",
+      "language": "string",
+      "description": "string",
+      "code": "string",
+      "comments_count": "number"
+    }
+  ]
+}
+```
+
+## Error Codes
+- `CONTENT_NOT_FOUND`: No relevant content found for the query
+- `INVALID_QUERY`: The query is malformed or empty
+- `INTERNAL_ERROR`: An internal error occurred while processing the request
+- `SESSION_EXPIRED`: The provided session ID is no longer valid
+
+## Rate Limiting
+- Requests are limited to 100 per minute per IP address
+- Burst allowance of up to 10 requests

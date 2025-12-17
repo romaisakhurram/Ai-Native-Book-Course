@@ -16,7 +16,7 @@
   },
   "sidebar": "bookSidebar",
   "next": {
-    "title": "Preface",
-    "permalink": "/Ai-Native-Book-Course/docs/preface"
+    "title": "Setting up your ROS 2 Environment",
+    "permalink": "/Ai-Native-Book-Course/docs/module1/setup"
   }
 }

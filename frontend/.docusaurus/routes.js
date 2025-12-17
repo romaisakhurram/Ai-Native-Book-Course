@@ -3,6 +3,41 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/Ai-Native-Book-Course/__docusaurus/debug',
+    component: ComponentCreator('/Ai-Native-Book-Course/__docusaurus/debug', '277'),
+    exact: true
+  },
+  {
+    path: '/Ai-Native-Book-Course/__docusaurus/debug/config',
+    component: ComponentCreator('/Ai-Native-Book-Course/__docusaurus/debug/config', 'a84'),
+    exact: true
+  },
+  {
+    path: '/Ai-Native-Book-Course/__docusaurus/debug/content',
+    component: ComponentCreator('/Ai-Native-Book-Course/__docusaurus/debug/content', '2ea'),
+    exact: true
+  },
+  {
+    path: '/Ai-Native-Book-Course/__docusaurus/debug/globalData',
+    component: ComponentCreator('/Ai-Native-Book-Course/__docusaurus/debug/globalData', 'f40'),
+    exact: true
+  },
+  {
+    path: '/Ai-Native-Book-Course/__docusaurus/debug/metadata',
+    component: ComponentCreator('/Ai-Native-Book-Course/__docusaurus/debug/metadata', '07f'),
+    exact: true
+  },
+  {
+    path: '/Ai-Native-Book-Course/__docusaurus/debug/registry',
+    component: ComponentCreator('/Ai-Native-Book-Course/__docusaurus/debug/registry', '561'),
+    exact: true
+  },
+  {
+    path: '/Ai-Native-Book-Course/__docusaurus/debug/routes',
+    component: ComponentCreator('/Ai-Native-Book-Course/__docusaurus/debug/routes', '31c'),
+    exact: true
+  },
+  {
     path: '/Ai-Native-Book-Course/blog',
     component: ComponentCreator('/Ai-Native-Book-Course/blog', 'a40'),
     exact: true
@@ -79,15 +114,15 @@ export default [
   },
   {
     path: '/Ai-Native-Book-Course/docs',
-    component: ComponentCreator('/Ai-Native-Book-Course/docs', 'bd6'),
+    component: ComponentCreator('/Ai-Native-Book-Course/docs', '3de'),
     routes: [
       {
         path: '/Ai-Native-Book-Course/docs',
-        component: ComponentCreator('/Ai-Native-Book-Course/docs', '349'),
+        component: ComponentCreator('/Ai-Native-Book-Course/docs', '33b'),
         routes: [
           {
             path: '/Ai-Native-Book-Course/docs',
-            component: ComponentCreator('/Ai-Native-Book-Course/docs', 'b57'),
+            component: ComponentCreator('/Ai-Native-Book-Course/docs', '743'),
             routes: [
               {
                 path: '/Ai-Native-Book-Course/docs/intro',
@@ -198,8 +233,32 @@ export default [
                 sidebar: "bookSidebar"
               },
               {
-                path: '/Ai-Native-Book-Course/docs/preface',
-                component: ComponentCreator('/Ai-Native-Book-Course/docs/preface', 'e7f'),
+                path: '/Ai-Native-Book-Course/docs/module4/capstone-architecture',
+                component: ComponentCreator('/Ai-Native-Book-Course/docs/module4/capstone-architecture', '932'),
+                exact: true,
+                sidebar: "bookSidebar"
+              },
+              {
+                path: '/Ai-Native-Book-Course/docs/module4/intro',
+                component: ComponentCreator('/Ai-Native-Book-Course/docs/module4/intro', '2dc'),
+                exact: true,
+                sidebar: "bookSidebar"
+              },
+              {
+                path: '/Ai-Native-Book-Course/docs/module4/llm-planning',
+                component: ComponentCreator('/Ai-Native-Book-Course/docs/module4/llm-planning', '63d'),
+                exact: true,
+                sidebar: "bookSidebar"
+              },
+              {
+                path: '/Ai-Native-Book-Course/docs/module4/ros2-mapping',
+                component: ComponentCreator('/Ai-Native-Book-Course/docs/module4/ros2-mapping', '9c0'),
+                exact: true,
+                sidebar: "bookSidebar"
+              },
+              {
+                path: '/Ai-Native-Book-Course/docs/module4/whisper-vision',
+                component: ComponentCreator('/Ai-Native-Book-Course/docs/module4/whisper-vision', 'c19'),
                 exact: true,
                 sidebar: "bookSidebar"
               },

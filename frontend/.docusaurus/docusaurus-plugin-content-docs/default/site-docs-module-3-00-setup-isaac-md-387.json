@@ -1,7 +1,7 @@
 {
   "id": "module3/setup-isaac",
   "title": "Setting up Isaac Sim and Isaac ROS Environments",
-  "description": "This chapter provides a foundational guide for setting up your development environment to work with NVIDIA Isaac Sim and Isaac ROS for advanced robotics simulation and AI-driven perception.",
+  "description": "This chapter provides a foundational guide for setting up your development environment to work with NVIDIA Isaac Sim and Isaac ROS. This powerful combination allows for advanced robotics simulation, photorealistic rendering, synthetic data generation, and hardware-accelerated AI perception.",
   "source": "@site/docs/module3/00-setup-isaac.md",
   "sourceDirName": "module3",
   "slug": "/module3/setup-isaac",

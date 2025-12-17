@@ -31,10 +31,7 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- [ ] **I. Technical Accuracy**: Does the plan ensure all technical descriptions and examples will be validated against the specified technologies (ROS 2, Gazebo, etc.)?
-- [ ] **II. Clear Explanations**: Does the proposed architecture support clear explanations for intermediate learners?
-- [ ] **III. Reproducibility**: Does the plan include explicit steps and configurations to ensure the feature is fully reproducible?
-- [ ] **IV. Consistent Structure**: Does the proposed file and code structure adhere to the Spec-Kit Plus and Claude Code workflows?
+[Gates determined based on constitution file]
 
 ## Project Structure
 

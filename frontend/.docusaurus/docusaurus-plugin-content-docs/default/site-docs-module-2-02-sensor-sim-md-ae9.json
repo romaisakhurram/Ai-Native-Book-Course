@@ -1,7 +1,7 @@
 {
   "id": "module2/sensor-sim",
   "title": "Sensor Simulation (LiDAR, Depth, IMU)",
-  "description": "This chapter delves into the principles and techniques behind simulating common robot sensors like LiDAR, Depth cameras, and IMUs in virtual environments.",
+  "description": "This chapter delves into the principles and techniques behind simulating common robot sensors like LiDAR, depth cameras, and Inertial Measurement Units (IMUs) in virtual environments. Accurate sensor simulation is paramount for developing robust perception, navigation, and control systems for robots without needing physical hardware.",
   "source": "@site/docs/module2/02-sensor-sim.md",
   "sourceDirName": "module2",
   "slug": "/module2/sensor-sim",

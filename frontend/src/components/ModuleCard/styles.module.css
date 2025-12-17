@@ -1,0 +1,76 @@
+
+.moduleCard {
+  --ifm-card-background-color: var(--ifm-color-surface); /* Use surface for card background */
+  --ifm-card-border-radius: var(--border-radius-lg);
+  --ifm-card-box-shadow: var(--shadow-md);
+
+  --ifm-font-color-base: #000;
+  --ifm-heading-color: #000;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-card-box-shadow);
+  background-color: var(--ifm-card-background-color);
+  color: var(--ifm-font-color-base); /* Inherit font color from base */
+  text-decoration: none; /* Remove underline from link */
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; T014: Hover transition;
+  padding: var(--spacing-lg); /* Add padding inside the card */
+  border: 1px solid var(--ifm-color-border);
+}
+
+.moduleCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none; /* Keep underline removed on hover */
+}
+
+.cardContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-md);
+  background-color: #2d3748; /* Charcoal gray background for missing images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0aec0; /* Light gray text for image placeholder */
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.moduleCard h3 {
+  font-size: 1.5rem;
+  color: var(--ifm-heading-color);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.moduleCard p {
+  font-size: 1rem;
+  color: var(--ifm-font-color-base);
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.cardFooter {
+  color: #000 !important;
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.cardFooter:hover,
+.cardFooter:focus,
+.cardFooter:active {
+  color: #000 !important;
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}

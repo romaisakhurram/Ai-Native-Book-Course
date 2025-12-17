@@ -15,7 +15,6 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   bookSidebar: [
     'intro', // This refers to docs/intro.md
-    'preface', // This refers to docs/preface.md
     {
       type: 'category',
       label: 'Module 1: The Robotic Nervous System (ROS 2)',
@@ -49,6 +48,17 @@ const sidebars: SidebarsConfig = {
         'module3/isaac-ros-perception',
         'module3/isaac-ros-pipeline',
         'module3/nav2-humanoid-isaac',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Module 4: Vision-Language-Action (VLA)',
+      items: [
+        'module4/intro',
+        'module4/whisper-vision',
+        'module4/llm-planning',
+        'module4/ros2-mapping',
+        'module4/capstone-architecture',
       ],
     },
   ],

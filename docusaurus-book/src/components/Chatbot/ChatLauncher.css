@@ -1,0 +1,53 @@
+.chat-launcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chat-launcher-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4f8afb;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.chat-launcher-button:hover {
+  transform: scale(1.1);
+  background-color: #3a6fd9;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.chat-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.chat-launcher.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .chat-launcher {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .chat-launcher-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

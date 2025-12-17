@@ -1,7 +1,7 @@
 {
   "id": "module3/isaac-ros-pipeline",
   "title": "Creating a Basic Perception Pipeline with Isaac ROS",
-  "description": "This chapter guides you through setting up a fundamental perception pipeline using NVIDIA Isaac ROS modules, and visualizing its output within Isaac Sim.",
+  "description": "This chapter guides you through setting up a fundamental perception pipeline using NVIDIA Isaac ROS modules, and visualizing its output. We will focus on integrating Isaac Sim as the sensor data source and an Isaac ROS Docker container for processing the data.",
   "source": "@site/docs/module3/03-isaac-ros-pipeline.md",
   "sourceDirName": "module3",
   "slug": "/module3/isaac-ros-pipeline",

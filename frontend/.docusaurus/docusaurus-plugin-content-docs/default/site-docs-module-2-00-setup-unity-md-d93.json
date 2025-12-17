@@ -1,7 +1,7 @@
 {
   "id": "module2/setup-unity",
   "title": "Setting up Unity for Robotics",
-  "description": "Unity provides a powerful platform for 3D visualization, simulation, and human-robot interaction. This chapter guides you through setting up Unity for robotics development.",
+  "description": "Unity provides a powerful platform for 3D visualization, realistic simulation, and developing interactive Human-Robot Interaction (HRI) applications. This chapter guides you through setting up Unity for robotics development, focusing on its integration with ROS 2.",
   "source": "@site/docs/module2/00-setup-unity.md",
   "sourceDirName": "module2",
   "slug": "/module2/setup-unity",

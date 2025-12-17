@@ -1,7 +1,7 @@
 {
   "id": "module3/isaac-sim-basics",
   "title": "Isaac Sim Basics and Photorealistic Simulation",
-  "description": "This chapter introduces NVIDIA Isaac Sim, a powerful platform for photorealistic robotic simulation and synthetic data generation.",
+  "description": "This chapter introduces NVIDIA Isaac Sim, a powerful platform for photorealistic robotic simulation and synthetic data generation. Built on NVIDIA Omniverse, Isaac Sim provides a highly realistic environment for developing, testing, and deploying AI-driven robots.",
   "source": "@site/docs/module3/01-isaac-sim-basics.md",
   "sourceDirName": "module3",
   "slug": "/module3/isaac-sim-basics",

@@ -1,7 +1,7 @@
 {
   "id": "module1/setup",
   "title": "Setting up your ROS 2 Environment",
-  "description": "This chapter will guide you through the process of setting up a ROS 2 development environment.",
+  "description": "This chapter will guide you through the process of setting up a ROS 2 development environment on Ubuntu Linux, which is the recommended operating system for ROS 2 development. A properly configured environment is crucial for building, running, and interacting with ROS 2 applications.",
   "source": "@site/docs/module1/00-setup.md",
   "sourceDirName": "module1",
   "slug": "/module1/setup",
@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "bookSidebar",
   "previous": {
-    "title": "Preface",
-    "permalink": "/Ai-Native-Book-Course/docs/preface"
+    "title": "Introduction to Physical AI & Humanoid Robotics",
+    "permalink": "/Ai-Native-Book-Course/docs/intro"
   },
   "next": {
     "title": "Understanding ROS 2 Nodes",
