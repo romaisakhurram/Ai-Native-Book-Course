@@ -3,7 +3,7 @@ Caching utilities for performance optimization
 """
 from typing import Any, Optional
 import asyncio
-import aioredis
+import redis.asyncio as redis
 from functools import wraps
 import hashlib
 import json
@@ -19,7 +19,7 @@ class CacheManager:
     async def connect(self):
         """Connect to Redis"""
         try:
-            self.redis = await aioredis.from_url(self.redis_url, decode_responses=True)
+            self.redis = await redis.Redis.from_url(self.redis_url, decode_responses=True)
             logger.info("Connected to Redis cache")
         except Exception as e:
             logger.error(f"Could not connect to Redis cache: {e}")

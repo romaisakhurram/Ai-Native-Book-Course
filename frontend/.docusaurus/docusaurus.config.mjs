@@ -32,7 +32,7 @@ export default {
   "baseUrl": "/Ai-Native-Book-Course/",
   "organizationName": "romaisakhurram",
   "projectName": "Ai-Native-Book-Course",
-  "onBrokenLinks": "warn",
+  "onBrokenLinks": "ignore",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -66,6 +66,13 @@ export default {
         }
       }
     ]
+  ],
+  "scripts": [
+    {
+      "src": "/Ai-Native-Book-Course/config.js",
+      "async": true,
+      "defer": true
+    }
   ],
   "themeConfig": {
     "image": "img/book.jpg",
@@ -371,7 +378,6 @@ export default {
   "customFields": {},
   "plugins": [],
   "themes": [],
-  "scripts": [],
   "headTags": [],
   "stylesheets": [],
   "clientModules": [],

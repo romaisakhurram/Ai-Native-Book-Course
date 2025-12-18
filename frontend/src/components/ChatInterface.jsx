@@ -1,13 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ChatInterface.css'; // Import the CSS file for the chat interface
 
-const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
+const ChatInterface = ({ sessionId, backendUrl }) => {
+  const defaultBackend = (typeof process !== 'undefined' && process.env && process.env.REACT_APP_BACKEND_URL)
+    || backendUrl
+    || (typeof window !== 'undefined' && window.__BACKEND_URL__)
+    || 'http://localhost:8000';
+
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [selectedText, setSelectedText] = useState('');
   const [queryMode, setQueryMode] = useState('FULL_BOOK'); // FULL_BOOK or SELECTED_TEXT_ONLY
   const messagesEndRef = useRef(null);
+
+  const genId = () => {
+    try {
+      if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
+    } catch (e) {}
+    return `${Date.now()}-${Math.random().toString(36).slice(2,9)}`;
+  };
 
   // Function to scroll to the bottom of the chat
   const scrollToBottom = () => {
@@ -19,17 +31,17 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
     scrollToBottom();
   }, [messages]);
 
-  // Handle text selection
+  // Handle text selection (mouse and keyboard)
   useEffect(() => {
     const handleTextSelection = () => {
-      const selectedText = window.getSelection().toString().trim();
-      if (selectedText) {
-        setSelectedText(selectedText);
-      }
+      const sel = (typeof window !== 'undefined' && window.getSelection) ? window.getSelection().toString().trim() : '';
+      setSelectedText(sel || '');
     };
 
+    document.addEventListener('selectionchange', handleTextSelection);
     document.addEventListener('mouseup', handleTextSelection);
     return () => {
+      document.removeEventListener('selectionchange', handleTextSelection);
       document.removeEventListener('mouseup', handleTextSelection);
     };
   }, []);
@@ -40,7 +52,7 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
 
     // Add user message to the chat
     const userMessage = {
-      id: Date.now(),
+      id: genId(),
       text: inputText,
       sender: 'user',
       timestamp: new Date()
@@ -57,7 +69,7 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
       };
 
       // Send the query to the backend
-      const response = await fetch(`${backendUrl}/api/v1/sessions/${sessionId}/queries`, {
+      const response = await fetch(`${defaultBackend}/api/v1/sessions/${sessionId}/queries`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -66,14 +78,17 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        // try to parse error message
+        let errText = `HTTP error! status: ${response.status}`;
+        try { const j = await response.json(); if (j && j.error) errText = j.error; } catch(e){}
+        throw new Error(errText);
       }
 
       const data = await response.json();
 
       // Add the response to the chat
       const botMessage = {
-        id: Date.now() + 1,
+        id: genId(),
         text: data.response_text,
         sender: 'bot',
         timestamp: new Date(),
@@ -86,7 +101,7 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
       
       // Add an error message to the chat
       const errorMessage = {
-        id: Date.now() + 1,
+        id: genId(),
         text: 'Sorry, I encountered an error processing your request. Please try again.',
         sender: 'bot',
         timestamp: new Date(),
@@ -106,18 +121,29 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
     sendMessage();
   };
 
+  // Handle Enter to send (Shift+Enter for newline)
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
+
   // Toggle between full book and selected text mode
   const toggleQueryMode = () => {
     setQueryMode(prev => prev === 'FULL_BOOK' ? 'SELECTED_TEXT_ONLY' : 'FULL_BOOK');
   };
 
+  const clearSelection = () => setSelectedText('');
+
   return (
-    <div className="chat-interface">
+    <div className="chat-interface" style={{ height: 'var(--chat-height, 500px)' }}>
       <div className="chat-header">
         <h3>RAG Chatbot</h3>
         <div className="query-mode-toggle">
           <label>
             <input
+              aria-label="Use selected text only"
               type="checkbox"
               checked={queryMode === 'SELECTED_TEXT_ONLY'}
               onChange={toggleQueryMode}
@@ -128,12 +154,13 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
       </div>
       
       {selectedText && queryMode === 'SELECTED_TEXT_ONLY' && (
-        <div className="selected-text-preview">
-          <strong>Selected Text:</strong> {selectedText.substring(0, 100)}{selectedText.length > 100 ? '...' : ''}
+        <div className="selected-text-preview" role="region" aria-label="Selected text preview">
+          <strong>Selected Text:</strong> {selectedText.substring(0, 200)}{selectedText.length > 200 ? '...' : ''}
+          <button className="clear-selection-btn" onClick={clearSelection} aria-label="Clear selected text">Clear</button>
         </div>
       )}
       
-      <div className="chat-messages">
+      <div className="chat-messages" role="log" aria-live="polite" aria-label="Chat messages">
         {messages.length === 0 ? (
           <div className="welcome-message">
             <p>Hello! I'm your book assistant. Ask me anything about the content you're reading.</p>
@@ -142,6 +169,7 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
           messages.map((message) => (
             <div 
               key={message.id} 
+              role="listitem"
               className={`message ${message.sender === 'user' ? 'user-message' : 'bot-message'}`}
             >
               <div className="message-content">
@@ -160,7 +188,7 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
                   </details>
                 )}
               </div>
-              <div className="message-timestamp">
+              <div className="message-timestamp" aria-hidden>
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </div>
             </div>
@@ -181,14 +209,16 @@ const ChatInterface = ({ sessionId, backendUrl = 'http://localhost:8000' }) => {
       </div>
       
       <form className="chat-input-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
+        <textarea
+          aria-label={queryMode === 'SELECTED_TEXT_ONLY' ? "Ask about selected text" : "Ask about the book content"}
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder={queryMode === 'SELECTED_TEXT_ONLY' ? "Ask about selected text..." : "Ask about the book content..."}
           disabled={isLoading}
+          rows={2}
         />
-        <button type="submit" disabled={isLoading || !inputText.trim()}>
+        <button type="submit" disabled={isLoading || !inputText.trim()} aria-label="Send message">
           Send
         </button>
       </form>

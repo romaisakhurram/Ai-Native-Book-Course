@@ -2,7 +2,9 @@
 .chat-interface {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: var(--chat-height, 500px);
+  max-height: 80vh;
+  min-height: 280px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -44,6 +46,18 @@
   color: #22863a;
   border-bottom: 1px solid #ddd;
 }
+
+.clear-selection-btn {
+  margin-left: 12px;
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.clear-selection-btn:hover { background: rgba(0,0,0,0.02); }
 
 .chat-messages {
   flex: 1;
@@ -132,13 +146,15 @@
   border-top: 1px solid #ddd;
 }
 
-.chat-input-form input {
+.chat-input-form textarea {
   flex: 1;
   padding: 10px 12px;
   border: 1px solid #ddd;
-  border-radius: 18px;
+  border-radius: 12px;
   margin-right: 8px;
   font-size: 1rem;
+  resize: vertical;
+  min-height: 44px;
 }
 
 .chat-input-form input:focus {
@@ -192,4 +208,9 @@
   40% {
     transform: scale(1);
   }
+}
+
+@media (max-width: 600px) {
+  .chat-interface { height: 60vh; min-height: 260px; }
+  .chat-input-form button { padding: 8px 12px; }
 }
