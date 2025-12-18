@@ -13,25 +13,25 @@ const MODULES = [
     title: 'Module 1: ROS2 Basics',
     // imageUrl: 'img/Cute astronaut read a book icon illustration _ Free Vector.mhtml', // Replace with actual image path
     description: 'Learn the fundamentals of ROS2, including nodes, topics, and services.',
-    link: '/docs/module1/00-setup',
+    link: 'module1/setup',
   },
   {
     title: 'Module 2: Digital Twin Simulation',
     // imageUrl: 'img/Cute astronaut reading book cartoon vector icon illustration science education isolated flat vector _ Free Vector.mhtml',  Replace with actual image path
     description: 'Explore Gazebo and Unity for realistic robotics simulation.',
-    link: '/docs/module2/00-setup-gazebo',
+    link: 'module2/setup-gazebo',
   },
   {
     title: 'Module 3: Isaac Perception & Navigation',
     // imageUrl: 'img/Flat artificial intelligence background _ Free Vector.mhtml',
     description: 'Dive into NVIDIA Isaac Sim for advanced robotics perception and navigation.',
-    link: '/docs/module3/00-setup-isaac',
+    link: 'module3/setup-isaac',
   },
    {
     title: 'Module 4: Advanced AI & Integration',
     // imageUrl: 'img/Machine learning book _ Free Vector.mhtml',
     description: 'Integrate learning-based perception, planning, and cloud native AI workflows.',
-    link: '/docs/module4/00-introduction',
+    link: 'module4/intro',
   },
 ];
 

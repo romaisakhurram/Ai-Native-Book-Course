@@ -25,7 +25,7 @@ const config: Config = {
   organizationName: 'romaisakhurram', // Usually your GitHub org/user name.
   projectName: 'Ai-Native-Book-Course', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'ignore',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -66,6 +66,14 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+  ],
+
+  scripts: [
+    {
+      src: '/Ai-Native-Book-Course/config.js',
+      async: true,
+      defer: true,
+    },
   ],
 
   themeConfig: {

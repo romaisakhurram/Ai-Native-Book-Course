@@ -1,9 +1,8 @@
 
 import React, { JSX } from 'react';
-import clsx from 'clsx';
+import {clsx} from 'clsx';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
-import Image from '@theme/ThemedImage';
 
 interface Props {
   title: string;
@@ -12,9 +11,9 @@ interface Props {
   imageUrl?: string;
 }
 
-export default function ModuleCard({ title, description, link, imageUrl }: Props): JSX.Element {
+export default function ModuleCard({ title, description, link }: Props): JSX.Element {
   return (
-    <Link to={link} className={clsx('card', styles.moduleCard)}>
+    <Link to={`/docs/${link}`} className={clsx('card', styles.moduleCard)}>
       <div className={styles.cardContent}>
         <h3>📚{title}</h3>
         <p>{description}</p>
