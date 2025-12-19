@@ -5,7 +5,7 @@
   "source": "@site/docs/module2/03-gazebo-digital-twin.md",
   "sourceDirName": "module2",
   "slug": "/module2/gazebo-digital-twin",
-  "permalink": "/ai-native-book-course/docs/module2/gazebo-digital-twin",
+  "permalink": "/Ai-Native-Book-Course/docs/module2/gazebo-digital-twin",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "bookSidebar",
   "previous": {
     "title": "Sensor Simulation (LiDAR, Depth, IMU)",
-    "permalink": "/ai-native-book-course/docs/module2/sensor-sim"
+    "permalink": "/Ai-Native-Book-Course/docs/module2/sensor-sim"
   },
   "next": {
     "title": "Unity for Robot Visualization and Human-Robot Interaction",
-    "permalink": "/ai-native-book-course/docs/module2/unity-hri"
+    "permalink": "/Ai-Native-Book-Course/docs/module2/unity-hri"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "permalink": "/ai-native-book-course/blog/first-blog-post",
+  "permalink": "/Ai-Native-Book-Course/blog/first-blog-post",
   "source": "@site/blog/2019-05-28-first-blog-post.md",
   "title": "First Blog Post",
   "description": "Lorem ipsum dolor sit amet...",
@@ -8,13 +8,13 @@
     {
       "inline": false,
       "label": "Hola",
-      "permalink": "/ai-native-book-course/blog/tags/hola",
+      "permalink": "/Ai-Native-Book-Course/blog/tags/hola",
       "description": "Hola tag description"
     },
     {
       "inline": false,
       "label": "Docusaurus",
-      "permalink": "/ai-native-book-course/blog/tags/docusaurus",
+      "permalink": "/Ai-Native-Book-Course/blog/tags/docusaurus",
       "description": "Docusaurus tag description"
     }
   ],
@@ -26,7 +26,7 @@
       "title": "Docusaurus maintainer",
       "url": "https://sebastienlorber.com",
       "page": {
-        "permalink": "/ai-native-book-course/blog/authors/all-sebastien-lorber-articles"
+        "permalink": "/Ai-Native-Book-Course/blog/authors/all-sebastien-lorber-articles"
       },
       "socials": {
         "x": "https://x.com/sebastienlorber",
@@ -42,7 +42,7 @@
       "title": "Ex-Meta Staff Engineer, Co-founder GreatFrontEnd",
       "url": "https://linkedin.com/in/yangshun",
       "page": {
-        "permalink": "/ai-native-book-course/blog/authors/yangshun"
+        "permalink": "/Ai-Native-Book-Course/blog/authors/yangshun"
       },
       "socials": {
         "x": "https://x.com/yangshunz",
@@ -69,6 +69,6 @@
   "unlisted": false,
   "prevItem": {
     "title": "Long Blog Post",
-    "permalink": "/ai-native-book-course/blog/long-blog-post"
+    "permalink": "/Ai-Native-Book-Course/blog/long-blog-post"
   }
 }

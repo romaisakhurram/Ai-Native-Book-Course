@@ -5,7 +5,7 @@
   "source": "@site/docs/module3/01-isaac-sim-basics.md",
   "sourceDirName": "module3",
   "slug": "/module3/isaac-sim-basics",
-  "permalink": "/ai-native-book-course/docs/module3/isaac-sim-basics",
+  "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-sim-basics",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "bookSidebar",
   "previous": {
     "title": "Setting up Isaac Sim and Isaac ROS Environments",
-    "permalink": "/ai-native-book-course/docs/module3/setup-isaac"
+    "permalink": "/Ai-Native-Book-Course/docs/module3/setup-isaac"
   },
   "next": {
     "title": "Isaac ROS Fundamentals and Perception Modules",
-    "permalink": "/ai-native-book-course/docs/module3/isaac-ros-perception"
+    "permalink": "/Ai-Native-Book-Course/docs/module3/isaac-ros-perception"
   }
 }
