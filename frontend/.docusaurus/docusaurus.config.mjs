@@ -29,10 +29,10 @@ export default {
     "experimental_router": "browser"
   },
   "url": "https://romaisakhurram.github.io",
-  "baseUrl": "/Ai-Native-Book-Course/",
+  "baseUrl": "/ai-native-book-course/",
   "organizationName": "romaisakhurram",
-  "projectName": "Ai-Native-Book-Course",
-  "onBrokenLinks": "ignore",
+  "projectName": "ai-native-book-course",
+  "onBrokenLinks": "warn",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -69,7 +69,7 @@ export default {
   ],
   "scripts": [
     {
-      "src": "/Ai-Native-Book-Course/config.js",
+      "src": "/ai-native-book-course/config.js",
       "async": true,
       "defer": true
     }
