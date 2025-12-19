@@ -18,12 +18,12 @@ const config: Config = {
   url: 'https://romaisakhurram.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Ai-Native-Book-Course/',
+  baseUrl: '/ai-native-book-course/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'romaisakhurram', // Usually your GitHub org/user name.
-  projectName: 'Ai-Native-Book-Course', // Usually your repo name.
+  projectName: 'ai-native-book-course', // Usually your repo name.
 
   onBrokenLinks: 'warn',
 
@@ -70,7 +70,7 @@ const config: Config = {
 
   scripts: [
     {
-      src: '/Ai-Native-Book-Course/config.js',
+      src: '/ai-native-book-course/config.js',
       async: true,
       defer: true,
     },
