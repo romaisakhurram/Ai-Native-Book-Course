@@ -3,6 +3,41 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/ai-native-book-course/__docusaurus/debug',
+    component: ComponentCreator('/ai-native-book-course/__docusaurus/debug', '5df'),
+    exact: true
+  },
+  {
+    path: '/ai-native-book-course/__docusaurus/debug/config',
+    component: ComponentCreator('/ai-native-book-course/__docusaurus/debug/config', '3a9'),
+    exact: true
+  },
+  {
+    path: '/ai-native-book-course/__docusaurus/debug/content',
+    component: ComponentCreator('/ai-native-book-course/__docusaurus/debug/content', '3d7'),
+    exact: true
+  },
+  {
+    path: '/ai-native-book-course/__docusaurus/debug/globalData',
+    component: ComponentCreator('/ai-native-book-course/__docusaurus/debug/globalData', '2c5'),
+    exact: true
+  },
+  {
+    path: '/ai-native-book-course/__docusaurus/debug/metadata',
+    component: ComponentCreator('/ai-native-book-course/__docusaurus/debug/metadata', 'd01'),
+    exact: true
+  },
+  {
+    path: '/ai-native-book-course/__docusaurus/debug/registry',
+    component: ComponentCreator('/ai-native-book-course/__docusaurus/debug/registry', 'f99'),
+    exact: true
+  },
+  {
+    path: '/ai-native-book-course/__docusaurus/debug/routes',
+    component: ComponentCreator('/ai-native-book-course/__docusaurus/debug/routes', 'c1c'),
+    exact: true
+  },
+  {
     path: '/ai-native-book-course/blog',
     component: ComponentCreator('/ai-native-book-course/blog', '35a'),
     exact: true
