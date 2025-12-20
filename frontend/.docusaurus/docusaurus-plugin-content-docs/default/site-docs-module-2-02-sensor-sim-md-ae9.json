@@ -5,7 +5,7 @@
   "source": "@site/docs/module2/02-sensor-sim.md",
   "sourceDirName": "module2",
   "slug": "/module2/sensor-sim",
-  "permalink": "/ai-native-book-course/docs/module2/sensor-sim",
+  "permalink": "/Ai-Native-Book-Course/docs/module2/sensor-sim",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "bookSidebar",
   "previous": {
     "title": "Physics Simulation and Collision Modeling",
-    "permalink": "/ai-native-book-course/docs/module2/physics-collision"
+    "permalink": "/Ai-Native-Book-Course/docs/module2/physics-collision"
   },
   "next": {
     "title": "Building a Basic Digital Twin in Gazebo",
-    "permalink": "/ai-native-book-course/docs/module2/gazebo-digital-twin"
+    "permalink": "/Ai-Native-Book-Course/docs/module2/gazebo-digital-twin"
   }
 }

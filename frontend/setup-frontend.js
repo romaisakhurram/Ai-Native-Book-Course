@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Get backend URL from environment or use default
-const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+const backendUrl = process.env.REACT_APP_BACKEND_URL || 'https://romaisakhurram-deploy-project.hf.space';
 
 console.log('🚀 Frontend Setup for RAG Chatbot Agent');
 console.log('=' .repeat(50));

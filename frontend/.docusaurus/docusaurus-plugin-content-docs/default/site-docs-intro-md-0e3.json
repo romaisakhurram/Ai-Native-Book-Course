@@ -5,7 +5,7 @@
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",
-  "permalink": "/ai-native-book-course/docs/intro",
+  "permalink": "/Ai-Native-Book-Course/docs/intro",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -17,6 +17,6 @@
   "sidebar": "bookSidebar",
   "next": {
     "title": "Setting up your ROS 2 Environment",
-    "permalink": "/ai-native-book-course/docs/module1/setup"
+    "permalink": "/Ai-Native-Book-Course/docs/module1/setup"
   }
 }
