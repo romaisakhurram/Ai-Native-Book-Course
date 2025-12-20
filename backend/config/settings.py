@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     qdrant_url: str = os.getenv("QDRANT_URL", "")
     qdrant_api_key: str = os.getenv("QDRANT_API_KEY", "")
     qdrant_base_url: str = os.getenv("QDRANT_BASE_URL", "https://localhost:6333")
-    neon_database_url: str = os.getenv("NEON_DATABASE_URL", "")
+    neon_database_url: str = os.getenv("NEON_DATABASE_URL", "sqlite:///./rag_chatbot.db")
 
     # Application settings
     app_name: str = "RAG Chatbot API for Markdown Book"

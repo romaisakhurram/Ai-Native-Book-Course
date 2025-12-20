@@ -5,9 +5,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from typing import List
 from datetime import datetime
 from uuid import UUID
-from ...models.database import get_db
-from ...models import schemas
-from ...utils import db_operations
+from api.models.database import get_db
+from api.models import schemas
+from api.utils import db_operations
 from sqlalchemy.orm import Session
 import logging
 
@@ -86,7 +86,7 @@ def get_session_history(session_id: str, db: Session = Depends(get_db)):
 
         # Get all queries associated with the session
         # We need to query the database directly since we don't have a helper function for this
-        from ..models import models
+        from api.models import models
         queries = db.query(models.Query).filter(models.Query.session_id == session_uuid).all()
 
         # For each query, get its response and build the history

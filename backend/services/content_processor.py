@@ -5,7 +5,7 @@ from typing import List, Dict, Any, Tuple
 import re
 from pathlib import Path
 import logging
-from ..models.schemas import BookContentChunkCreate
+from api.models.schemas import BookContentChunkCreate
 
 logger = logging.getLogger(__name__)
 

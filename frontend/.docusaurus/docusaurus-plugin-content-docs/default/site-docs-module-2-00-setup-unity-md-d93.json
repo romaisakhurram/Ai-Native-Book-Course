@@ -5,7 +5,7 @@
   "source": "@site/docs/module2/00-setup-unity.md",
   "sourceDirName": "module2",
   "slug": "/module2/setup-unity",
-  "permalink": "/Ai-Native-Book-Course/docs/module2/setup-unity",
+  "permalink": "/docs/module2/setup-unity",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "bookSidebar",
   "previous": {
     "title": "Setting up ROS 2 and Gazebo for Digital Twin Simulation",
-    "permalink": "/Ai-Native-Book-Course/docs/module2/setup-gazebo"
+    "permalink": "/docs/module2/setup-gazebo"
   },
   "next": {
     "title": "Physics Simulation and Collision Modeling",
-    "permalink": "/Ai-Native-Book-Course/docs/module2/physics-collision"
+    "permalink": "/docs/module2/physics-collision"
   }
 }

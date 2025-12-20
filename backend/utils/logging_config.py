@@ -4,7 +4,7 @@ Centralized logging configuration for the RAG Chatbot API
 import logging
 import sys
 from pythonjsonlogger import jsonlogger
-from ..config.settings import settings
+from api.config.settings import settings
 from datetime import datetime
 import os
 

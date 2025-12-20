@@ -4,7 +4,7 @@ Chat service for generating responses based on retrieved context
 from typing import List, Dict, Any, Optional
 import openai
 import logging
-from ..models.schemas import QueryRequest, ResponseCreate, SourceChunk, TokenUsage
+from api.models.schemas import QueryRequest, ResponseCreate, SourceChunk, TokenUsage
 from .retrieval_service import RetrievalService
 
 logger = logging.getLogger(__name__)

@@ -8,8 +8,8 @@ from typing import List, Dict, Any, Optional
 import openai
 import asyncio
 import logging
-from ..config.settings import settings
-from ..models.schemas import BookContentChunkCreate
+from api.config.settings import settings
+from api.models.schemas import BookContentChunkCreate
 
 logger = logging.getLogger(__name__)
 

@@ -5,7 +5,7 @@
   "source": "@site/docs/module2/01-physics-collision.md",
   "sourceDirName": "module2",
   "slug": "/module2/physics-collision",
-  "permalink": "/Ai-Native-Book-Course/docs/module2/physics-collision",
+  "permalink": "/docs/module2/physics-collision",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "bookSidebar",
   "previous": {
     "title": "Setting up Unity for Robotics",
-    "permalink": "/Ai-Native-Book-Course/docs/module2/setup-unity"
+    "permalink": "/docs/module2/setup-unity"
   },
   "next": {
     "title": "Sensor Simulation (LiDAR, Depth, IMU)",
-    "permalink": "/Ai-Native-Book-Course/docs/module2/sensor-sim"
+    "permalink": "/docs/module2/sensor-sim"
   }
 }

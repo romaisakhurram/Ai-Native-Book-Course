@@ -5,7 +5,7 @@
   "source": "@site/docs/module1/00-setup.md",
   "sourceDirName": "module1",
   "slug": "/module1/setup",
-  "permalink": "/Ai-Native-Book-Course/docs/module1/setup",
+  "permalink": "/docs/module1/setup",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "bookSidebar",
   "previous": {
     "title": "Introduction to Physical AI & Humanoid Robotics",
-    "permalink": "/Ai-Native-Book-Course/docs/intro"
+    "permalink": "/docs/intro"
   },
   "next": {
     "title": "Understanding ROS 2 Nodes",
-    "permalink": "/Ai-Native-Book-Course/docs/module1/nodes"
+    "permalink": "/docs/module1/nodes"
   }
 }

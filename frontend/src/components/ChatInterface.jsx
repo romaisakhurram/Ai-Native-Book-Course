@@ -5,7 +5,10 @@ const ChatInterface = ({ sessionId, backendUrl }) => {
   const defaultBackend = (typeof process !== 'undefined' && process.env && process.env.REACT_APP_BACKEND_URL)
     || backendUrl
     || (typeof window !== 'undefined' && window.__BACKEND_URL__)
-    || 'https://romaisakhurram-deploy-project.hf.space';
+    || 'https://romaisakhurram-deploy-project.hf.space/';
+
+  // Ensure sessionId is available - use a default if not provided
+  const effectiveSessionId = sessionId || 'default-session-' + Math.random().toString(36).substring(2, 10);
 
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
@@ -69,7 +72,7 @@ const ChatInterface = ({ sessionId, backendUrl }) => {
       };
 
       // Send the query to the backend
-      const response = await fetch(`${defaultBackend}/api/v1/sessions/${sessionId}/queries`, {
+      const response = await fetch(`${defaultBackend}/api/v1/sessions/${effectiveSessionId}/queries`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -222,6 +225,7 @@ const ChatInterface = ({ sessionId, backendUrl }) => {
           Send
         </button>
       </form>
+      <div ref={messagesEndRef} />
     </div>
   );
 };

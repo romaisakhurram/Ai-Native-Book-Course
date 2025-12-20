@@ -3,9 +3,9 @@ Retrieval service for performing semantic search over book content
 """
 from typing import List, Dict, Any, Optional
 import logging
-from ..models.schemas import QueryRequest, SourceChunk
+from api.models.schemas import QueryRequest, SourceChunk
 from .embedding_service import EmbeddingService
-from ..utils.caching import cache_result
+from api.utils.caching import cache_result
 
 logger = logging.getLogger(__name__)
 
