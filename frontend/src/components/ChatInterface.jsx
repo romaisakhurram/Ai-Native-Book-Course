@@ -5,7 +5,7 @@ const ChatInterface = ({ sessionId, backendUrl }) => {
   const defaultBackend = (typeof process !== 'undefined' && process.env && process.env.REACT_APP_BACKEND_URL)
     || backendUrl
     || (typeof window !== 'undefined' && window.__BACKEND_URL__)
-    || 'https://romaisakhurram-deploy-project.hf.space/';
+    || 'https://romaisakhurram-deploy-project.hf.space';
 
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
