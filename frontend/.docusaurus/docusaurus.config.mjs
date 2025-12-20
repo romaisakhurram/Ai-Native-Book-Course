@@ -29,7 +29,7 @@ export default {
     "experimental_router": "browser"
   },
   "url": "https://romaisakhurram.github.io",
-  "baseUrl": "/Ai-Native-Book-Course/",
+  "baseUrl": "/",
   "organizationName": "romaisakhurram",
   "projectName": "Ai-Native-Book-Course",
   "onBrokenLinks": "warn",
