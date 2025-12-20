@@ -70,19 +70,10 @@ const config: Config = {
 
   scripts: [
     {
-      src: '/Ai-Native-Book-Course/config.js',
+      src: '/ai-native-book-course/config.js',
       async: true,
       defer: true,
     },
-    {
-      src: 'https://romaisakhurram-deploy-project.hf.space/config.js',
-      async: true,
-      defer: true,
-    },
-  ],
-
-  clientModules: [
-    '@site/src/clientModules/backendUrlInjector.ts',
   ],
 
   themeConfig: {
