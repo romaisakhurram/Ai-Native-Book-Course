@@ -4,7 +4,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "react",
-    "baseUrl": "/Ai-Native-Book-Course/"
+    "baseUrl": "/"
   },
   "exclude": [".docusaurus", "build"]
 }

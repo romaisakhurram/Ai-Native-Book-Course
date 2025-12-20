@@ -69,7 +69,7 @@ export default {
   ],
   "scripts": [
     {
-      "src": "/ai-native-book-course/config.js",
+      "src": "/Ai-Native-Book-Course/config.js",
       "async": true,
       "defer": true
     }
