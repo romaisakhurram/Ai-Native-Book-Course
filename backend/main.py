@@ -22,8 +22,11 @@ app.add_middleware(RequestLoggingMiddleware)
 
 # Import API routes here to avoid circular imports
 from .api.routes import sessions, queries
+from .api.v1.endpoints.chat import router as chat_router
+
 app.include_router(sessions.router, prefix="/api/v1", tags=["sessions"])
 app.include_router(queries.router, prefix="/api/v1", tags=["queries"])
+app.include_router(chat_router, prefix="/api/v1", tags=["chat"])
 
 @app.on_event("startup")
 async def startup_event():
