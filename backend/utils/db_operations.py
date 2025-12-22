@@ -3,7 +3,7 @@ Database operations for the RAG Chatbot
 """
 from sqlalchemy.orm import Session
 from typing import Optional
-from api.models import models, schemas
+from models import models, schemas
 from uuid import UUID
 import uuid
 

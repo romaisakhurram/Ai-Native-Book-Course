@@ -74,6 +74,11 @@ const config: Config = {
       async: true,
       defer: true,
     },
+    {
+      src: '/Ai-Native-Book-Course/api-config.js',
+      async: true,
+      defer: true,
+    },
   ],
 
   themeConfig: {

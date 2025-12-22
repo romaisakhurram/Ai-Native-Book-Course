@@ -1,0 +1,13 @@
+requests
+beautifulsoup4
+cohere
+qdrant-client
+python-dotenv
+openai-agents
+uvicorn
+fastapi
+docker
+sqlalchemy
+aiosqlite
+python-json-logger
+redis

@@ -5,7 +5,12 @@
 import { ChatRequest, ChatResponse, Message, MessageContext } from '../components/Chatbot';
 
 // Define the base API URL from environment or default
-const API_BASE_URL = process.env.REACT_APP_CHAT_API_URL || 'https://romaisakhurram-deploy-project.hf.space/api/v1';
+let API_BASE_URL = process.env.REACT_APP_CHAT_API_URL || 'http://localhost:8000/api/v1';
+
+// For deployed sites, use the production API endpoint
+if (typeof window !== 'undefined' && window.location.hostname.includes('github.io')) {
+  API_BASE_URL = window.ENV?.REACT_APP_CHAT_API_URL || 'https://romaisakhurram-deploy-project.hf.space/api/v1';
+}
 
 // Define the possible statuses for queued messages
 type QueuedMessageStatus = 'queued' | 'sending' | 'sent' | 'error';

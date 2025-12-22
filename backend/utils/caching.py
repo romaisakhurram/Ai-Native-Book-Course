@@ -3,7 +3,6 @@ Caching utilities for performance optimization
 """
 from typing import Any, Optional
 import asyncio
-import redis.asyncio as redis
 from functools import wraps
 import hashlib
 import json
@@ -17,10 +16,14 @@ class CacheManager:
         self.redis = None
 
     async def connect(self):
-        """Connect to Redis"""
+        """Connect to Redis if available, otherwise use in-memory cache"""
         try:
-            self.redis = await redis.Redis.from_url(self.redis_url, decode_responses=True)
+            import redis.asyncio as redis_lib
+            self.redis = await redis_lib.Redis.from_url(self.redis_url, decode_responses=True)
             logger.info("Connected to Redis cache")
+        except ImportError:
+            logger.warning("Redis not available, using in-memory cache")
+            self.redis = None  # Will use in-memory solution
         except Exception as e:
             logger.error(f"Could not connect to Redis cache: {e}")
             self.redis = None  # Fallback to in-memory solution

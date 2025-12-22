@@ -3,9 +3,8 @@ from typing import Dict, Any
 import asyncio
 import json
 from datetime import datetime
-
-from ...models.chat_models import ChatRequest, ChatResponse, ErrorResponse
-from ...core.rag_service import RAGService
+from models.chat_models import ChatRequest, ChatResponse, ErrorResponse
+from core.rag_service import RAGService
 
 router = APIRouter()
 rag_service = RAGService()
@@ -69,7 +68,7 @@ async def stream_message(chat_request: ChatRequest):
     async def event_generator():
         try:
             # Check if the AI service is available
-            service_available = rag_service.is_available()
+            service_available = await rag_service.is_available()
             
             if not service_available:
                 # Add to queue and notify that message is queued

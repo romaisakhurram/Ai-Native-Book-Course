@@ -4,7 +4,7 @@ Chat service for generating responses based on retrieved context
 from typing import List, Dict, Any, Optional
 import openai
 import logging
-from api.models.schemas import QueryRequest, ResponseCreate, SourceChunk, TokenUsage
+from models.schemas import QueryRequest, ResponseCreate, SourceChunk, TokenUsage
 from .retrieval_service import RetrievalService
 
 logger = logging.getLogger(__name__)
@@ -97,7 +97,7 @@ class ChatService:
             
             # Call the LLM
             response = openai.chat.completions.create(
-                model="Qwen/Qwen2-72B-Instruct",  # Using Qwen model as specified in the requirements
+                model="mistralai/devstral-2512:free",  # Updated to use mistralai/devstral-2512:free model
                 messages=[
                     {"role": "system", "content": system_message},
                     {"role": "user", "content": user_message}

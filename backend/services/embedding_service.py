@@ -8,8 +8,8 @@ from typing import List, Dict, Any, Optional
 import openai
 import asyncio
 import logging
-from api.config.settings import settings
-from api.models.schemas import BookContentChunkCreate
+from config.settings import settings
+from models.schemas import BookContentChunkCreate
 
 logger = logging.getLogger(__name__)
 
@@ -30,10 +30,10 @@ class EmbeddingService:
         """
         try:
             # Determine the embedding size based on the model being used
-            # Qwen3-embedding-8b produces 4096-dimensional vectors
+            # Mistral models typically produce 4096-dimensional vectors
             # text-embedding-ada-002 produces 1536-dimensional vectors
             model_name = getattr(settings, 'openai_model', 'text-embedding-ada-002').lower()
-            if "qwen" in model_name:
+            if "mistralai" in model_name or "devstral" in model_name:
                 embedding_size = 4096
             else:
                 embedding_size = 1536  # Default for OpenAI models
