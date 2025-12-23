@@ -78,13 +78,19 @@ export const sendMessage = async (request: ChatRequest): Promise<ChatResponse> =
     };
   } catch (error) {
     console.error('Error sending message:', error);
-    
+
     // If we can't reach the service, add the message to the queue
     if (isNetworkError(error as Error)) {
       return queueMessage(request);
     }
-    
-    throw error;
+
+    // For other errors (like 500), return a helpful error response
+    return {
+      responseId: `error_${Date.now()}`,
+      content: "Sorry, I encountered an error processing your request. Please try again later.",
+      timestamp: new Date(),
+      status: 'error',
+    };
   }
 };
 
