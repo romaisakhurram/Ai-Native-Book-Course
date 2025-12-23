@@ -5,9 +5,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from typing import List
 from datetime import datetime
 from uuid import UUID
-from models.database import get_db
-from models import schemas
-from utils import db_operations
+from ...models.database import get_db
+from ...models import schemas
+from ...utils import db_operations
 from sqlalchemy.orm import Session
 import logging
 
