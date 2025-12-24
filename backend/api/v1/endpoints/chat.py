@@ -3,8 +3,8 @@ from typing import Dict, Any
 import asyncio
 import json
 from datetime import datetime
-from ....models.chat_models import ChatRequest, ChatResponse, ErrorResponse
-from ....core.rag_service import RAGService
+from models.chat_models import ChatRequest, ChatResponse, ErrorResponse
+from core.rag_service import RAGService
 
 router = APIRouter()
 rag_service = RAGService()

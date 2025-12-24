@@ -5,11 +5,11 @@ from fastapi import APIRouter, Depends, HTTPException
 from typing import List
 from datetime import datetime
 from uuid import UUID
-from ...models.database import get_db
-from ...models import schemas
-from ...utils import db_operations
-from ...services.chat_service import ChatService
-from ...services.retrieval_service import RetrievalService
+from models.database import get_db
+from models import schemas
+from utils import db_operations
+from services.chat_service import ChatService
+from services.retrieval_service import RetrievalService
 from sqlalchemy.orm import Session
 import logging
 

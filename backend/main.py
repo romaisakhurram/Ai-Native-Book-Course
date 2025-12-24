@@ -1,10 +1,10 @@
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from .config.settings import settings
-from .models.database import engine, Base
-from .middleware.request_logging import RequestLoggingMiddleware
-from .middleware.rate_limit import RateLimitMiddleware
-from .utils.logging_config import setup_logging, get_logger
+from config.settings import settings
+from models.database import engine, Base
+from middleware.request_logging import RequestLoggingMiddleware
+from middleware.rate_limit import RateLimitMiddleware
+from utils.logging_config import setup_logging, get_logger
 
 # Configure logging
 setup_logging()
@@ -29,8 +29,8 @@ app.add_middleware(RateLimitMiddleware, requests_limit=100, window_seconds=3600)
 app.add_middleware(RequestLoggingMiddleware)
 
 # Import API routes here to avoid circular imports
-from .api.routes import sessions, queries
-from .api.v1.endpoints.chat import router as chat_router
+from api.routes import sessions, queries
+from api.v1.endpoints.chat import router as chat_router
 
 app.include_router(sessions.router, prefix="/api/v1", tags=["sessions"])
 app.include_router(queries.router, prefix="/api/v1", tags=["queries"])

@@ -4,7 +4,7 @@ Database connection setup for the RAG Chatbot with Neon Postgres
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from ..config.settings import settings
+from config.settings import settings
 import logging
 
 logger = logging.getLogger(__name__)
