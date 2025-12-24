@@ -28,7 +28,7 @@ export default {
     },
     "experimental_router": "browser"
   },
-  "url": "https://romaisakhurram.github.io",
+  "url": "https://ai-native-book-course.vercel.app",
   "baseUrl": "/",
   "organizationName": "romaisakhurram",
   "projectName": "Ai-Native-Book-Course",
