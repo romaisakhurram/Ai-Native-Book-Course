@@ -5,7 +5,7 @@ const ChatInterface = ({ sessionId, backendUrl }) => {
   const defaultBackend = (typeof process !== 'undefined' && process.env && process.env.REACT_APP_BACKEND_URL)
     || backendUrl
     || (typeof window !== 'undefined' && window.__BACKEND_URL__)
-    || 'https://romaisakhurram-deploy-project.hf.space/asks/';
+    || 'https://romaisakhurram-deploy-project.hf.space';
 
   // Ensure sessionId is available - use a default if not provided
   const effectiveSessionId = sessionId || 'default-session-' + Math.random().toString(36).substring(2, 10);
