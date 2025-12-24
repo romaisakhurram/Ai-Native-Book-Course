@@ -10,6 +10,9 @@ let API_BASE_URL = process.env.REACT_APP_CHAT_API_URL || 'http://localhost:8000/
 // For deployed sites, use the production API endpoint
 if (typeof window !== 'undefined' && window.location.hostname.includes('github.io')) {
   API_BASE_URL = window.ENV?.REACT_APP_CHAT_API_URL || 'https://romaisakhurram-deploy-project.hf.space/api/v1';
+} else if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+  // For local development, use the local backend
+  API_BASE_URL = 'http://localhost:8000/api/v1';
 }
 
 // Define the possible statuses for queued messages

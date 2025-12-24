@@ -60,10 +60,12 @@ def health_check():
     return {"status": "healthy"}
 
 # Error handlers
+from fastapi.responses import JSONResponse
+
 @app.exception_handler(404)
 async def not_found_handler(request, exc):
-    return {"error": "Endpoint not found"}
+    return JSONResponse({"error": "Endpoint not found"}, status_code=404)
 
 @app.exception_handler(500)
 async def internal_error_handler(request, exc):
-    return {"error": "Internal server error"}
+    return JSONResponse({"error": "Internal server error"}, status_code=500)

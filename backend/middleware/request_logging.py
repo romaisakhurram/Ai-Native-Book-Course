@@ -16,12 +16,13 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next):
         start_time = time.time()
-        
+
         # Log the incoming request
         logger.info(f"Incoming request: {request.method} {request.url}")
-        
+
+        response = None
         try:
-            response: Response = await call_next(request)
+            response = await call_next(request)
         except Exception as e:
             # Log any exceptions that occur
             logger.error(f"Request error: {request.method} {request.url} - {str(e)}")
@@ -29,8 +30,10 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
         finally:
             # Calculate and log the response time
             process_time = time.time() - start_time
-            response.headers["X-Process-Time"] = str(process_time)
-            
-            logger.info(f"Request completed: {request.method} {request.url} - {response.status_code} - {process_time:.4f}s")
-        
+            if response is not None:
+                response.headers["X-Process-Time"] = str(process_time)
+                logger.info(f"Request completed: {request.method} {request.url} - {response.status_code} - {process_time:.4f}s")
+            else:
+                logger.info(f"Request failed: {request.method} {request.url} - {time.time() - start_time:.4f}s")
+
         return response
