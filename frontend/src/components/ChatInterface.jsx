@@ -2,13 +2,25 @@ import React, { useState, useEffect, useRef } from 'react';
 import './ChatInterface.css'; // Import the CSS file for the chat interface
 
 const ChatInterface = ({ sessionId, backendUrl }) => {
-  const defaultBackend = (typeof process !== 'undefined' && process.env && process.env.REACT_APP_BACKEND_URL)
+  // Use API base URL if available, otherwise construct from backend URL
+  let apiBaseUrl = (typeof process !== 'undefined' && process.env && process.env.REACT_APP_API_BASE_URL)
+    || (typeof window !== 'undefined' && window.__API_BASE__)
     || backendUrl
     || (typeof window !== 'undefined' && window.__BACKEND_URL__)
     || 'https://romaisakhurram-deploy-project.hf.space';
 
-  // Ensure sessionId is available - use a default if not provided
-  const effectiveSessionId = sessionId || 'default-session-' + Math.random().toString(36).substring(2, 10);
+  // If apiBaseUrl is the backend URL (like http://127.0.0.1:8000), append /api/v1
+  // If it already includes /api/v1 (like http://127.0.0.1:8000/api/v1), use as is
+  if (!apiBaseUrl.endsWith('/api/v1')) {
+    if (apiBaseUrl.endsWith('/')) {
+      apiBaseUrl += 'api/v1';
+    } else {
+      apiBaseUrl += '/api/v1';
+    }
+  }
+
+  // We'll use the session ID provided or create one if needed
+  const [effectiveSessionId, setEffectiveSessionId] = useState(sessionId || null);
 
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
@@ -64,40 +76,154 @@ const ChatInterface = ({ sessionId, backendUrl }) => {
     setIsLoading(true);
     
     try {
-      // Prepare the query request
-      const queryRequest = {
-        query_text: inputText,
-        query_mode: queryMode,
-        selected_text: queryMode === 'SELECTED_TEXT_ONLY' ? selectedText : null
+      // Helper function to validate if a session ID is a proper UUID
+      const isValidUUID = (id) => {
+        const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+        return uuidRegex.test(id);
       };
 
+      // Determine the endpoint to use and prepare appropriate request
+      let endpoint, requestBody;
+      if (effectiveSessionId && isValidUUID(effectiveSessionId)) {
+        // If we have a valid UUID session ID, use the queries endpoint
+        endpoint = `${apiBaseUrl}/sessions/${effectiveSessionId}/queries`;
+        requestBody = {
+          query_text: inputText,
+          query_mode: queryMode,
+          selected_text: queryMode === 'SELECTED_TEXT_ONLY' ? selectedText : null
+        };
+      } else {
+        // If no session ID or invalid session ID, first create a session using chat endpoint
+        let actualSessionId = effectiveSessionId;
+        if (!actualSessionId || !isValidUUID(actualSessionId)) {
+          const sessionResponse = await fetch(`${apiBaseUrl}/chat/start`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({})
+          });
+
+          if (!sessionResponse.ok) {
+            throw new Error(`Failed to create session: ${sessionResponse.status} ${sessionResponse.statusText}`);
+          }
+
+          const sessionData = await sessionResponse.json();
+          actualSessionId = sessionData.sessionId;
+          setEffectiveSessionId(actualSessionId); // Update the state with the new session ID
+        }
+
+        endpoint = `${apiBaseUrl}/chat/send`;
+        requestBody = {
+          message: inputText,
+          sessionId: actualSessionId,
+          context: queryMode === 'SELECTED_TEXT_ONLY' && selectedText ? {
+            selectedText: selectedText,
+            sourcePage: window.location.pathname
+          } : null
+        };
+      }
+
       // Send the query to the backend
-      const response = await fetch(`${defaultBackend}/api/v1/sessions/${effectiveSessionId}/queries`, {
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(queryRequest)
+        body: JSON.stringify(requestBody)
       });
 
       if (!response.ok) {
-        // try to parse error message
-        let errText = `HTTP error! status: ${response.status}`;
-        try { const j = await response.json(); if (j && j.error) errText = j.error; } catch(e){}
-        throw new Error(errText);
+        // If we get a 404 or 400 when using the queries endpoint, it might be because the session doesn't exist or is invalid
+        if ((response.status === 404 || response.status === 400) && endpoint.includes('/sessions/') && endpoint.includes('/queries')) {
+          console.log('Session not found or invalid, switching to chat endpoint...');
+          // Switch to using the chat endpoint for this request
+          const chatEndpoint = `${apiBaseUrl}/chat/send`;
+          // Create a new session first
+          const sessionResponse = await fetch(`${apiBaseUrl}/chat/start`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({})
+          });
+
+          if (!sessionResponse.ok) {
+            throw new Error(`Failed to create session: ${sessionResponse.status} ${sessionResponse.statusText}`);
+          }
+
+          const sessionData = await sessionResponse.json();
+          const newSessionId = sessionData.sessionId;
+          setEffectiveSessionId(newSessionId); // Update the state with the new session ID
+
+          const chatRequestBody = {
+            message: inputText,
+            sessionId: newSessionId,
+            context: queryMode === 'SELECTED_TEXT_ONLY' && selectedText ? {
+              selectedText: selectedText,
+              sourcePage: window.location.pathname
+            } : null
+          };
+
+          const chatResponse = await fetch(chatEndpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(chatRequestBody)
+          });
+
+          if (!chatResponse.ok) {
+            let errText = `HTTP error! status: ${chatResponse.status}`;
+            try { const j = await chatResponse.json(); if (j && j.error) errText = j.error; } catch(e){}
+            throw new Error(errText);
+          }
+
+          const chatData = await chatResponse.json();
+
+          // Chat endpoint response (ChatResponse format)
+          const botMessage = {
+            id: genId(),
+            text: chatData.content,
+            sender: 'bot',
+            timestamp: new Date(),
+            sources: [] // Chat endpoint doesn't return source chunks in the same format
+          };
+
+          setMessages(prev => [...prev, botMessage]);
+          return; // Exit early since we've handled the request with the chat endpoint
+        } else {
+          // For other errors, parse and throw as before
+          let errText = `HTTP error! status: ${response.status}`;
+          try { const j = await response.json(); if (j && j.error) errText = j.error; } catch(e){}
+          throw new Error(errText);
+        }
       }
 
       const data = await response.json();
 
+      // Determine response format based on endpoint used
+      let responseText, sources;
+      if (endpoint.includes('/chat/send')) {
+        // Chat endpoint response (ChatResponse format)
+        responseText = data.content;
+        // Chat endpoint doesn't return source chunks in the same format
+        sources = [];
+      } else {
+        // Queries endpoint response (QueryResponse format)
+        responseText = data.response_text;
+        sources = data.source_chunks || [];
+      }
+
       // Add the response to the chat
       const botMessage = {
         id: genId(),
-        text: data.response_text,
+        text: responseText,
         sender: 'bot',
         timestamp: new Date(),
-        sources: data.source_chunks || []
+        sources: sources
       };
-      
+
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
       console.error('Error sending message:', error);

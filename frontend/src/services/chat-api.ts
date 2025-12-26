@@ -105,7 +105,7 @@ export const sendMessage = async (request: ChatRequest): Promise<ChatResponse> =
  * @param onComplete Optional callback for when streaming completes
  */
 export const streamMessage = (
-  request: ChatRequest, 
+  request: ChatRequest,
   onMessage: (content: string, isComplete: boolean, status: 'success' | 'error' | 'queued') => void,
   onError: (error: Error) => void,
   onComplete?: () => void
@@ -144,7 +144,7 @@ export const streamMessage = (
         try {
           while (true) {
             const { done, value } = await reader.read();
-            
+
             if (done) {
               break;
             }
@@ -161,11 +161,11 @@ export const streamMessage = (
               if (line.startsWith('data: ')) {
                 try {
                   const data = JSON.parse(line.substring(6)); // Remove 'data: ' prefix
-                  
+
                   if (data.content !== undefined) {
                     onMessage(data.content, data.done || false, data.status || 'success');
                   }
-                  
+
                   if (data.done) {
                     if (onComplete) onComplete();
                     return;
@@ -189,7 +189,7 @@ export const streamMessage = (
     })
     .catch(error => {
       console.error('Stream error:', error);
-      
+
       // If it's a network error, queue the message
       if (isNetworkError(error)) {
         queueMessage(request);
@@ -197,19 +197,19 @@ export const streamMessage = (
       } else {
         onError(error);
       }
-      
+
       if (onComplete) onComplete();
     });
   } catch (error) {
     console.error('Error initiating stream:', error);
     onError(error as Error);
-    
+
     // If it's a network error, queue the message
     if (isNetworkError(error as Error)) {
       queueMessage(request);
       onMessage('', true, 'queued');
     }
-    
+
     if (onComplete) onComplete();
   }
 };
