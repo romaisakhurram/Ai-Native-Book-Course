@@ -35,18 +35,18 @@ async def send_message(chat_request: ChatRequest):
     try:
         # Use RAG service to generate response with context
         response_content = await rag_service.process_query(
-            chat_request.message,
-            chat_request.sessionId,
-            chat_request.context
+            query=chat_request.message,
+            session_id=chat_request.sessionId,
+            context=chat_request.context
         )
-        
+
         response = ChatResponse(
             responseId=f"resp_{int(datetime.now().timestamp())}",
             content=response_content,
             timestamp=datetime.now(),
             status="success"
         )
-        
+
         return response
     except Exception as e:
         error_resp = ErrorResponse(

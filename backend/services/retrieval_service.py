@@ -50,22 +50,42 @@ class RetrievalService:
         :param limit: Maximum number of results to return
         :return: List of source chunks
         """
-        # Use the embedding service to search for similar content
-        search_results = await self.embedding_service.search_similar(query_text, limit)
+        try:
+            # Use the embedding service to search for similar content
+            search_results = await self.embedding_service.search_similar(query_text, limit)
 
-        # Convert search results to SourceChunk objects
-        source_chunks = []
-        for result in search_results:
-            source_chunk = SourceChunk(
-                chunk_id=result["chunk_id"],
-                content=result["content"],
-                document_id=result["document_id"],
-                metadata=result.get("metadata", {})
-            )
-            source_chunks.append(source_chunk)
+            logger.info(f"Search for query '{query_text[:30]}...' returned {len(search_results)} results")
 
-        logger.info(f"Retrieved {len(source_chunks)} chunks for query: {query_text[:50]}...")
-        return source_chunks
+            # Convert search results to SourceChunk objects
+            source_chunks = []
+            for result in search_results:
+                logger.debug(f"Processing search result: {result.keys() if isinstance(result, dict) else type(result)}")
+
+                # Ensure result is a dictionary with expected keys
+                if not isinstance(result, dict):
+                    logger.warning(f"Search result is not a dict: {type(result)}, skipping")
+                    continue
+
+                # Check if required keys exist in the result
+                if "content" not in result:
+                    logger.warning(f"Search result missing 'content' key: {result.keys()}, skipping")
+                    continue
+
+                source_chunk = SourceChunk(
+                    chunk_id=result.get("chunk_id", "unknown"),
+                    content=result["content"],  # Required field
+                    document_id=result.get("document_id", "unknown"),
+                    metadata=result.get("metadata", {})
+                )
+                source_chunks.append(source_chunk)
+
+            logger.info(f"Successfully converted {len(source_chunks)} results to SourceChunk objects for query: {query_text[:50]}...")
+            return source_chunks
+        except Exception as e:
+            logger.error(f"Error in _retrieve_from_full_book: {e}")
+            logger.exception("Full traceback:")  # Log the full exception for debugging
+            # Return empty list on error, but log it
+            return []
 
     def _create_source_chunks_from_selected_text(self, selected_text: str, query_text: str) -> List[SourceChunk]:
         """

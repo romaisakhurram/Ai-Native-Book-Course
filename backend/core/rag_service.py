@@ -47,30 +47,58 @@ class RAGService:
         # Get session data to maintain conversation history
         session_data = self._get_session_data(session_id)
 
-        # Simulate processing delay
-        await asyncio.sleep(0.5)
+        # Import the services needed for RAG functionality
+        from services.retrieval_service import RetrievalService
+        from services.chat_service import ChatService
+        from models.schemas import QueryRequest, SourceChunk
 
-        # In a real implementation, this would:
-        # 1. Retrieve relevant documents from vector store based on query and context
-        # 2. Pass the query, context, and retrieved documents to an LLM
-        # 3. Return the generated response
+        # Create an instance of the retrieval service to get relevant context
+        retrieval_service = RetrievalService()
 
-        # For this example, we'll return a simulated response
-        if context and context.selectedText:
-            # Process with selected text context
-            response = (f"I can help you with your question about: '{query}'. "
-                       f"The selected text you provided is: '{context.selectedText[:100]}...' "
-                       f"Based on the book content and this context, here's my response.")
-        else:
-            # Process without specific context
-            response = f"I can help you with your question: '{query}'. Based on the book content and this context, here's my response."
+        # Determine query mode based on context
+        query_mode = "SELECTED_TEXT_ONLY" if context and context.selectedText else "FULL_BOOK"
+        selected_text = context.selectedText if context and context.selectedText else None
+
+        # Retrieve relevant context from the vector database
+        source_chunks = await retrieval_service.retrieve_context(
+            query_text=query,
+            query_mode=query_mode,
+            selected_text=selected_text,
+            limit=5  # Retrieve up to 5 relevant chunks
+        )
+
+        # Create a query request object - using the correct schema fields
+        query_request = QueryRequest(
+            query_text=query,
+            query_mode=query_mode,
+            selected_text=selected_text
+        )
+
+        # Create an instance of the chat service to generate the response
+        chat_service = ChatService()
+
+        try:
+            # Generate the response using the retrieved context
+            response_obj = await chat_service.generate_response(
+                query_request=query_request,
+                source_chunks=source_chunks
+            )
+        except Exception as e:
+            # If there's an error generating the response, return a default error response
+            from models.schemas import ResponseCreate, TokenUsage, SourceChunk
+            response_obj = ResponseCreate(
+                response_text="I'm sorry, I encountered an error while processing your request. Please try again.",
+                source_chunks=[],
+                token_usage=TokenUsage(input_tokens=0, output_tokens=0),
+                query_id=f"query_{int(time.time())}_{abs(hash(query)) % 10000}"
+            )
 
         # Add this interaction to the conversation history
         session_data = self._get_session_data(session_id)  # Get updated session data
         session_data["conversation_history"].append({
             "query": query,
             "context": context.dict() if context else None,
-            "response": response,
+            "response": getattr(response_obj, 'response_text', response_obj if isinstance(response_obj, str) else "Error generating response"),
             "timestamp": time.time()
         })
 
@@ -78,7 +106,8 @@ class RAGService:
         if len(session_data["conversation_history"]) > 50:  # Keep last 50 interactions
             session_data["conversation_history"] = session_data["conversation_history"][-50:]
 
-        return response
+        # Return the response text, with fallback if the response object doesn't have the expected structure
+        return getattr(response_obj, 'response_text', response_obj if isinstance(response_obj, str) else "Error generating response")
     
     async def stream_response(
         self,

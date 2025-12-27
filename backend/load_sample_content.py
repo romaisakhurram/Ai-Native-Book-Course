@@ -203,12 +203,12 @@ Best Practices for Agent Development:
     
     if success:
         logger.info("Successfully stored sample content in the vector database")
-        print("✓ Sample content loaded successfully!")
-        print(f"✓ Loaded {len(chunks)} content chunks")
-        print("✓ Content is now available for semantic search")
+        print("+ Sample content loaded successfully!")
+        print(f"+ Loaded {len(chunks)} content chunks")
+        print("+ Content is now available for semantic search")
     else:
         logger.error("Failed to store sample content in the vector database")
-        print("✗ Failed to load sample content")
+        print("X Failed to load sample content")
         
     return success
 
@@ -221,10 +221,10 @@ def main():
     success = asyncio.run(load_sample_content())
     
     if success:
-        print("\n✓ Content loading completed successfully!")
+        print("\n+ Content loading completed successfully!")
         print("The chatbot should now be able to answer questions based on the loaded content.")
     else:
-        print("\n✗ Content loading failed!")
+        print("\nX Content loading failed!")
         print("The chatbot may not be able to provide meaningful responses.")
 
 if __name__ == "__main__":

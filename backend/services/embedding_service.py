@@ -93,7 +93,7 @@ class EmbeddingService:
                     # This ensures similar texts get similar embeddings (simplified)
                     hash_val = hash(text) % (10 ** 8)  # Get a hash of the text
                     np.random.seed(hash_val)  # Use the hash as seed for reproducibility
-                    embedding = np.random.uniform(-1, 1, 384).tolist()  # Create a 384-dim embedding
+                    embedding = np.random.uniform(-1, 1, 4096).tolist()  # Create a 4096-dim embedding to match Qdrant
                     mock_embeddings.append(embedding)
                 return mock_embeddings
 
@@ -126,7 +126,7 @@ class EmbeddingService:
                 for i, text in enumerate(texts):
                     hash_val = hash(text) % (10 ** 8)
                     np.random.seed(hash_val)
-                    embedding = np.random.uniform(-1, 1, 384).tolist()
+                    embedding = np.random.uniform(-1, 1, 4096).tolist()  # 4096-dim to match Qdrant
                     mock_embeddings.append(embedding)
                 return mock_embeddings
 
@@ -140,7 +140,7 @@ class EmbeddingService:
             for i, text in enumerate(texts):
                 hash_val = hash(text) % (10 ** 8)
                 np.random.seed(hash_val)
-                embedding = np.random.uniform(-1, 1, 384).tolist()
+                embedding = np.random.uniform(-1, 1, 4096).tolist()  # 4096-dim to match Qdrant
                 mock_embeddings.append(embedding)
             return mock_embeddings
 
@@ -259,22 +259,71 @@ class EmbeddingService:
             query_embeddings = await self.generate_embeddings([query])
             query_vector = query_embeddings[0]
 
-            # Search in Qdrant
-            search_result = self.client.search(
-                collection_name=self.collection_name,
-                query_vector=query_vector,
-                limit=limit
-            )
+            # Search in Qdrant - determine the correct approach based on the client type
+            # According to Qdrant documentation, we should use the search method on the client
+            try:
+                # Standard search method for Qdrant client
+                search_result = self.client.search(
+                    collection_name=self.collection_name,
+                    query_vector=query_vector,
+                    limit=limit
+                )
+            except AttributeError:
+                # If search method doesn't exist, the client might be using a different interface
+                # Try using the low-level REST API directly
+                import requests
+                import json
 
-            # Format results
+                # Get the base URL from settings, removing the protocol and path for proper construction
+                base_url = settings.qdrant_url.rstrip('/')
+
+                # Construct the proper URL for the search endpoint
+                search_url = f"{base_url}/collections/{self.collection_name}/points/search"
+
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {settings.qdrant_api_key}",
+                    "User-Agent": "RAG-Chatbot/1.0"
+                }
+
+                search_payload = {
+                    "vector": query_vector,
+                    "limit": limit
+                }
+
+                response = requests.post(search_url, headers=headers, json=search_payload)
+
+                if response.status_code == 200:
+                    search_result = response.json().get('result', [])
+                else:
+                    logger.error(f"Direct HTTP search failed with status {response.status_code}: {response.text}")
+                    raise AttributeError(f"HTTP search failed with status {response.status_code}: {response.text}")
+
+            # Format results - handle different response formats
             results = []
             for hit in search_result:
+                # Handle different Qdrant client response formats
+                try:
+                    # Newer format: hit has attributes like id, score, payload
+                    chunk_id = hit.id
+                    content = hit.payload.get("content", "")
+                    document_id = hit.payload.get("document_id", "")
+                    score = hit.score
+                    metadata = hit.payload
+                except AttributeError:
+                    # Older format: hit might be a dictionary or have different structure
+                    chunk_id = hit.get("id", "") if hasattr(hit, 'get') else getattr(hit, 'id', '')
+                    content = hit.payload.get("content", "") if hasattr(hit, 'payload') else hit.get("payload", {}).get("content", "")
+                    document_id = hit.payload.get("document_id", "") if hasattr(hit, 'payload') else hit.get("payload", {}).get("document_id", "")
+                    score = hit.get("score", 0) if hasattr(hit, 'get') else getattr(hit, 'score', 0)
+                    metadata = hit.payload if hasattr(hit, 'payload') else hit.get("payload", {})
+
                 result = {
-                    "chunk_id": hit.id,
-                    "content": hit.payload.get("content", ""),
-                    "document_id": hit.payload.get("document_id", ""),
-                    "score": hit.score,
-                    "metadata": hit.payload
+                    "chunk_id": chunk_id,
+                    "content": content,
+                    "document_id": document_id,
+                    "score": score,
+                    "metadata": metadata
                 }
                 results.append(result)
 
