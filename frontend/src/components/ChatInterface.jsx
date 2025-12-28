@@ -7,7 +7,7 @@ const ChatInterface = ({ sessionId: propSessionId, backendUrl }) => {
     || (typeof window !== 'undefined' && window.__API_BASE__)
     || backendUrl
     || (typeof window !== 'undefined' && window.__BACKEND_URL__)
-    || 'http://127.0.0.1:8000'; // Default to local backend
+    || 'https://romaisakhurram-deploy-project.hf.space'; // Use the deployed backend URL
 
   // Ensure the apiBaseUrl ends with /api/v1
   const normalizedApiBaseUrl = apiBaseUrl.endsWith('/api/v1')
@@ -71,12 +71,14 @@ const ChatInterface = ({ sessionId: propSessionId, backendUrl }) => {
       // If no session ID exists, create one first
       let actualSessionId = effectiveSessionId;
       if (!actualSessionId) {
-        const sessionResponse = await fetch(`${normalizedApiBaseUrl}/chat/start`, {
+        const sessionResponse = await fetch(`${normalizedApiBaseUrl}/sessions`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({})
+          body: JSON.stringify({
+            userId: 'default-user'  // Using a default user ID
+          })
         });
 
         if (!sessionResponse.ok) {
@@ -88,18 +90,15 @@ const ChatInterface = ({ sessionId: propSessionId, backendUrl }) => {
         setEffectiveSessionId(actualSessionId); // Update the state with the new session ID
       }
 
-      // Prepare the request payload
+      // Prepare the request payload for the query endpoint
       const requestBody = {
-        message: inputText,
-        sessionId: actualSessionId,
-        context: queryMode === 'SELECTED_TEXT_ONLY' && selectedText ? {
-          selectedText: selectedText,
-          sourcePage: window.location.pathname
-        } : null
+        query_text: inputText,
+        query_mode: queryMode === 'SELECTED_TEXT_ONLY' ? 'SELECTED_TEXT_ONLY' : 'FULL_BOOK',
+        selected_text: queryMode === 'SELECTED_TEXT_ONLY' ? selectedText : null
       };
 
-      // Send the message to the backend
-      const response = await fetch(`${normalizedApiBaseUrl}/chat/send`, {
+      // Send the query to the backend using the sessions/queries endpoint
+      const response = await fetch(`${normalizedApiBaseUrl}/sessions/${actualSessionId}/queries`, {
         method: 'POST',  // Important: Use POST method
         headers: {
           'Content-Type': 'application/json'
@@ -116,10 +115,10 @@ const ChatInterface = ({ sessionId: propSessionId, backendUrl }) => {
       // Add the response to the chat
       const botMessage = {
         id: genId(),
-        text: data.content || data.response_text || "Sorry, I couldn't process your request.",
+        text: data.response_text || data.content || "Sorry, I couldn't process your request.",
         sender: 'bot',
         timestamp: new Date(),
-        sources: data.sources || []
+        sources: data.source_chunks || []  // Use source_chunks as returned by the backend
       };
 
       setMessages(prev => [...prev, botMessage]);
